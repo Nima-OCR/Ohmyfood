@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif, 'Shrikhand', cursive;
+    color: #FFFFFF;
+    background-color: #ffffff;
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.heading-primary {
+    color: $color-black;
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 2rem;
+
+    &--main {
+        display: block;
+        font-size: 1.8rem;
+        font-weight: 900;
+    }
+
+    &--sub {
+        //text-align: center;
+        //font-size: 1.3rem;
+        //font-weight: 300;
+        //padding-left: 1rem;
+        //padding-right: 1rem;
+        //margin-top: 0;
+        //margin-bottom: 31px;
+        display: block;
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+}
