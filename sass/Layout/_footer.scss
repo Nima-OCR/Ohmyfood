@@ -3,13 +3,33 @@
     background-color: #353535;
     padding: 25px 0 35px 25px;
 
+
     &__footer-heading {
         font-weight: 300;
         margin-bottom: 25px;
+        font-family: Shrikhand, Roboto, sans-serif;
     }
 
     &__list {
+        padding-left: 0;
         list-style: none;
+
+    }
+
+    &__li {
+        padding-bottom: 15px;
+
+    }
+
+    &__a {
+        color: $color-white;
+        text-decoration: none;
+    }
+
+    &__span {
+        color: $color-white;
+        padding-left: 12px;
+        font-weight: 400;
     }
 
 }

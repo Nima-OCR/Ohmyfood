@@ -1,7 +1,18 @@
-@import "Layout/footer";
 @import "Utils/variables";
+
 @import "Base/typography";
+
+@import "Composants/smal-card";
+@import "Composants/card";
 @import "Composants/button";
-@import "Layout/header";
 @import "Composants/form";
+
+
+@import "Layout/footer";
+@import "Layout/container";
+@import "Layout/header";
+
+@import "Pages/home";
+
+
 
