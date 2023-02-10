@@ -1,10 +1,10 @@
 body {
   margin: 0;
   font-family: "Roboto", sans-serif, "Shrikhand", cursive;
-  color: #FFFFFF;
-  background-color: #ffffff;
+  color: #fff;
+  background-color: #fff;
   width: 100%;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.2;
 }
 
@@ -44,7 +44,7 @@ body {
   border-radius: 22px;
   padding: 1.5rem 1rem;
   margin-left: 15px;
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.5rem;
   cursor: pointer;
 }
 .smal-card:hover {
@@ -60,7 +60,6 @@ body {
   background: #FFFFFF;
   border-radius: 20px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-  cursor: pointer;
 }
 .card__size {
   width: 100%;
@@ -84,12 +83,13 @@ body {
 }
 .card__heading {
   width: 100%;
-  padding: 1.15rem 1rem;
+  padding: 1rem 1rem;
 }
 .card__heading-span {
   color: #000;
   font-size: 1.1rem;
   font-weight: 900;
+  cursor: pointer;
 }
 .card__heading-span--fs {
   font-size: 0.9rem;
@@ -97,19 +97,26 @@ body {
 .card--sub {
   color: #000;
   font-weight: 300;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   margin: 0;
+  cursor: pointer;
 }
 .card--fa-heart {
   font-size: 1.5rem;
   font-weight: 900;
   color: #000;
+  cursor: pointer;
+}
+.card--fa-heart:hover {
+  color: #9356DC;
 }
 .card__details {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 7px;
+}
+.card__a {
+  text-decoration: none;
 }
 
 .btn {
@@ -139,12 +146,12 @@ body {
 }
 
 .footer {
-  background-color: #353535;
-  padding: 25px 0 35px 25px;
+  background-color: rgba(0, 0, 0, 0.79);
+  padding: 0.4rem 0 1rem 1.5rem;
 }
 .footer__footer-heading {
   font-weight: 300;
-  margin-bottom: 25px;
+  color: rgba(255, 255, 255, 0.9);
   font-family: Shrikhand, Roboto, sans-serif;
 }
 .footer__list {
@@ -152,23 +159,29 @@ body {
   list-style: none;
 }
 .footer__li {
-  padding-bottom: 15px;
+  padding-bottom: 0.3rem;
 }
 .footer__a {
   color: #fff;
   text-decoration: none;
 }
 .footer__span {
-  color: #fff;
-  padding-left: 12px;
-  font-weight: 400;
+  font-weight: 300;
+}
+.footer__span--pl {
+  padding-left: 0.5rem;
+}
+.footer__icon {
+  font-size: 0.75rem;
+  width: 15px;
+  height: 15px;
 }
 
 .row-cards {
   max-width: 100%;
   margin: 0 auto;
   background-color: #f7f7f7;
-  padding: 60px 20px;
+  padding: 3.5rem 1.25rem;
 }
 
 .header {
@@ -208,7 +221,7 @@ body {
 }
 
 .select-container {
-  padding-top: 2rem;
+  padding-top: 1.7rem;
   color: #000;
 }
 

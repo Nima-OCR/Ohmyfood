@@ -1,12 +1,13 @@
 
 .footer {
-    background-color: #353535;
-    padding: 25px 0 35px 25px;
-
+    background-color: rgba($color-black, 0.79);
+    padding: 0.4rem 0 1rem 1.5rem ;
 
     &__footer-heading {
         font-weight: 300;
-        margin-bottom: 25px;
+        color: rgba($color-white, 0.9);
+
+        //margin-bottom: 25px;
         font-family: Shrikhand, Roboto, sans-serif;
     }
 
@@ -17,7 +18,7 @@
     }
 
     &__li {
-        padding-bottom: 15px;
+        padding-bottom: 0.3rem;
 
     }
 
@@ -27,9 +28,17 @@
     }
 
     &__span {
-        color: $color-white;
-        padding-left: 12px;
-        font-weight: 400;
+        //padding-left: 12px;
+        font-weight: 300;
+        &--pl {
+            padding-left: 0.5rem;
+        }
+    }
+
+    &__icon {
+        font-size: 0.75rem;
+        width: 15px;
+        height: 15px;
     }
 
 }
