@@ -6,17 +6,21 @@
   border-style: none;
   border-radius: 22px;
   padding: 1.5rem 1rem;
-  //padding-top: 1.5rem;
-  //padding-bottom: 1.5rem;
-  //padding-left: 1rem;
   margin-left: 15px;
   margin-bottom: 1.5rem ;
   cursor: pointer;
 
   &:hover {
     background-color: rgba($color-primary, 0.10);
-
   }
-
-
 }
+
+.smal-card--preview {
+  margin-left: 0px;
+  padding:0;
+  &:hover {
+    background-color: initial;
+  }
+}
+
+

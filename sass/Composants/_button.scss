@@ -1,5 +1,4 @@
 .btn {
-    //width: 100%;
   display: inline-block;
 
     text-decoration: none;
@@ -11,4 +10,8 @@
     border-radius: 1.5rem;
     color: rgba($color-white, .9);
     cursor: pointer;
+
+  &__preview {
+    padding: 1rem 3.1rem;
+  }
 }
