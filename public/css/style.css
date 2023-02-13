@@ -50,6 +50,9 @@ body {
 .smal-card:hover {
   background-color: rgba(147, 86, 220, 0.1);
 }
+.smal-card:hover i {
+  color: #9356DC;
+}
 
 .smal-card--preview {
   margin-left: 0px;
