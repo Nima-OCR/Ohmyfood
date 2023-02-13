@@ -38,6 +38,7 @@ body {
 
 .smal-card {
   display: flex;
+  line-height: 1.25rem;
   background-color: #f7f7f7;
   box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.18);
   border-style: none;
@@ -117,7 +118,7 @@ body {
 .card--sub {
   color: #000;
   font-weight: 300;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   margin: 0;
   cursor: pointer;
 }
@@ -137,6 +138,10 @@ body {
 }
 .card__a {
   text-decoration: none;
+  width: 85%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .card__preview {
   text-transform: uppercase;
@@ -149,11 +154,18 @@ body {
 .card__green-line {
   width: 3rem;
   border-bottom: solid 3px #99E2D0;
+  margin-top: 0.3rem;
   margin-bottom: 1rem;
 }
 .card__green-line--plat {
   width: 2.7rem;
   margin-left: 2.5rem;
+}
+.card__main-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1.2rem;
 }
 
 .btn {
@@ -321,7 +333,6 @@ body {
 
 .choose-place-p {
   color: #000;
-  padding-left: 1.62rem;
   font-weight: 700;
   margin: 0;
 }
