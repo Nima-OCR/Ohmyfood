@@ -252,6 +252,13 @@ body {
   text-align: center;
   padding: 2rem 1rem 3.5rem 1rem;
 }
+.header__i {
+  position: absolute;
+  left: 25px;
+  top: 20px;
+  color: black;
+  font-size: 22px;
+}
 
 .section-fonctionnement {
   padding: 3rem 1.25rem 2.6rem 1.25rem;
