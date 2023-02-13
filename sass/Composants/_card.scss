@@ -94,9 +94,17 @@
     }
 
     &__preview {
-        line-height: 3rem;
-        font-size: 1.2rem;
+        text-transform: uppercase;
+        //line-height: 3rem;
+        font-size: 1.05rem;
+        margin-top: 2rem;
+    }
+
+    &__green-line {
+        width: 3rem;
         border-bottom: solid 3px $color-tertiary;
+        margin-bottom: 1rem;
+
     }
 
 }

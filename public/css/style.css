@@ -139,9 +139,14 @@ body {
   text-decoration: none;
 }
 .card__preview {
-  line-height: 3rem;
-  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-size: 1.05rem;
+  margin-top: 2rem;
+}
+.card__green-line {
+  width: 3rem;
   border-bottom: solid 3px #99E2D0;
+  margin-bottom: 1rem;
 }
 
 .btn {
