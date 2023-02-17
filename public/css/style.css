@@ -64,7 +64,7 @@ body {
 .smal-card:hover {
   background-color: rgba(147, 86, 220, 0.1);
   transition: 700ms ease-in-out;
-  padding-right: rem;
+  padding-right: 5rem;
 }
 .smal-card:hover i {
   color: #9356DC;
