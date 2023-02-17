@@ -1,7 +1,6 @@
 .smal-card {
   display: flex;
   line-height: 1.25rem;
-
   background-color: $color-grey-soft;
   box-shadow: 0 .3rem 1rem rgba($color-black, .18);
   border-style: none;
@@ -11,10 +10,34 @@
   margin-bottom: 1.5rem ;
   cursor: pointer;
 
-  &:hover {
+  &:hover  {
     background-color: rgba($color-primary, 0.10);
+    transition: 700ms ease-in-out;
+    padding-right: rem;
+
     i{
       color: $color-primary;
+    }
+
+    .check {
+      width: 61px;
+      height: 68px;
+      position: absolute;
+      right: 16px;
+      //top: 170px;
+      font-size: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0 15px 15px 0 ;
+      background-color: $color-tertiary;
+      transform-origin: right;
+      animation: moveInLeft $prog-check-timing $prog-check-delay both;
+
+      & .fa-circle-check {
+        color: #fff;
+        animation: rotate 700ms ease-in-out;
+      }
     }
   }
 }
@@ -23,8 +46,11 @@
   margin-left: 0px;
   margin-bottom: 0.8rem ;
   padding:0;
+
   &:hover {
     background-color: initial;
+
+
   }
 }
 

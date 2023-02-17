@@ -36,6 +36,19 @@ body {
   margin: 0;
 }
 
+@keyframes moveInLeft {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .smal-card {
   display: flex;
   line-height: 1.25rem;
@@ -50,9 +63,29 @@ body {
 }
 .smal-card:hover {
   background-color: rgba(147, 86, 220, 0.1);
+  transition: 700ms ease-in-out;
+  padding-right: rem;
 }
 .smal-card:hover i {
   color: #9356DC;
+}
+.smal-card:hover .check {
+  width: 61px;
+  height: 68px;
+  position: absolute;
+  right: 16px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 15px 15px 0;
+  background-color: #99E2D0;
+  transform-origin: right;
+  animation: moveInLeft 450ms 250ms both;
+}
+.smal-card:hover .check .fa-circle-check {
+  color: #fff;
+  animation: rotate 700ms ease-in-out;
 }
 
 .smal-card--preview {
@@ -101,7 +134,7 @@ body {
 }
 .card__heading {
   width: 100%;
-  padding: 1rem 1rem;
+  padding: 0.85rem;
 }
 .card__heading-span {
   color: #000;
