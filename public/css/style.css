@@ -50,6 +50,7 @@ body {
   }
 }
 .smal-card {
+  width: 100%;
   display: flex;
   line-height: 1.25rem;
   background-color: #f7f7f7;
@@ -61,31 +62,29 @@ body {
   margin-bottom: 1.5rem;
   cursor: pointer;
 }
+.smal-card i {
+  display: none;
+}
 .smal-card:hover {
   background-color: rgba(147, 86, 220, 0.1);
   transition: 700ms ease-in-out;
-  padding-right: 5rem;
-}
-.smal-card:hover i {
-  color: #9356DC;
 }
 .smal-card:hover .check {
-  width: 61px;
-  height: 68px;
-  position: absolute;
-  right: 16px;
-  font-size: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem 1.3rem;
+  position: relative;
+  font-size: 1.5rem;
   border-radius: 0 15px 15px 0;
   background-color: #99E2D0;
   transform-origin: right;
-  animation: moveInLeft 450ms 250ms both;
+  animation: moveInLeft 450ms 50ms ease-in-out;
 }
-.smal-card:hover .check .fa-circle-check {
+.smal-card:hover .check i {
+  display: block;
   color: #fff;
-  animation: rotate 700ms ease-in-out;
+  animation: rotate 50ms ease-in-out;
 }
 
 .smal-card--preview {
@@ -133,8 +132,23 @@ body {
   border-radius: 3px;
 }
 .card__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
   width: 100%;
   padding: 0.85rem;
+  transition: padding-right 450ms 50ms ease-in-out;
+}
+.card__heading:hover {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding-right: 4rem;
+}
+.card__heading:hover .card--sub {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .card__heading-span {
   color: #000;
@@ -150,6 +164,7 @@ body {
   font-weight: 400;
 }
 .card--sub {
+  text-decoration: none;
   color: #000;
   font-weight: 300;
   font-size: 0.95rem;
@@ -166,16 +181,13 @@ body {
   color: #9356DC;
 }
 .card__details {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: 100%;
 }
 .card__a {
   text-decoration: none;
-  width: 85%;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .card__preview {
   text-transform: uppercase;
@@ -369,6 +381,7 @@ body {
   color: #000;
   font-weight: 700;
   margin: 0;
+  padding-left: 1rem;
 }
 
 .commander {
