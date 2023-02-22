@@ -61,12 +61,12 @@ body {
   margin-bottom: 1.5rem;
   cursor: pointer;
 }
-.smal-card i {
-  display: none;
-}
 .smal-card:hover {
   background-color: rgba(147, 86, 220, 0.1);
   transition: 700ms ease-in-out;
+}
+.smal-card:hover i {
+  color: #9356DC;
 }
 .smal-card:hover .check {
   display: flex;
@@ -93,6 +93,9 @@ body {
 }
 .smal-card--preview:hover {
   background-color: initial;
+}
+.smal-card--preview i {
+  display: none;
 }
 
 .card {
