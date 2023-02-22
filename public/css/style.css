@@ -49,6 +49,21 @@ body {
     transform: rotate(360deg);
   }
 }
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fade-in {
+  from {
+    transform: translateY(15%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
 .smal-card {
   display: flex;
   line-height: 1.25rem;
@@ -259,6 +274,20 @@ body {
 }
 .form__input::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.7);
+}
+
+.animation--ease1 {
+  animation: fade-in 800ms ease-in-out;
+  transition: fader;
+}
+.animation--ease2 {
+  animation: fade-in 1000ms ease-in-out;
+}
+.animation--ease3 {
+  animation: fade-in 1200ms ease-in-out;
+}
+.animation--ease4 {
+  animation: fade-in 1200s ease-in-out;
 }
 
 .footer {
