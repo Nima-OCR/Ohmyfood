@@ -109,7 +109,15 @@ body {
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 .card i {
-  color: green;
+  cursor: pointer;
+}
+.card i:hover {
+  background: linear-gradient(to left, #9356DC, #FF79DA);
+  animation: fill 600ms ease-in-out;
+  padding: 1px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
 .card__size {
   width: 100%;

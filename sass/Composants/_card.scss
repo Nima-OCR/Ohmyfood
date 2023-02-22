@@ -11,7 +11,16 @@
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 
     & i {
-        color: green;
+        cursor: pointer;
+
+        &:hover {
+            background: $fa-background-color;
+            animation: fill 600ms ease-in-out;
+            padding: 1px;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color:transparent;
+            font-weight: bold;
+        }
     }
 
 
