@@ -1,4 +1,6 @@
 @import "Utils/variables";
+@import "Utils/mixins";
+
 
 @import "Base/typography", "Base/animations";
 
@@ -7,8 +9,6 @@
 @import "Composants/button";
 @import "Composants/form";
 @import "Composants/animation-menus";
-
-
 
 @import "Layout/footer";
 @import "Layout/container";

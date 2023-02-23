@@ -2,7 +2,7 @@
 
 
   &__input {
-    width: 33%;
+    //width: 33%;
     font-size: 1em;
     font-weight: 600;
     background: transparent;
@@ -13,6 +13,10 @@
 
     &::-webkit-input-placeholder {
       color: rgb($color-black, 0.7);
+
+      @include respond(phone) {
+        display: initial;
+      }
     }
   }
 }

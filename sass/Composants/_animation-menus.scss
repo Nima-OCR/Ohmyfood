@@ -2,7 +2,6 @@
 
   &--ease1 {
     animation: fade-in 800ms ease-in-out;
-    transition: fader;
   }
 
   &--ease2 {
@@ -16,6 +15,4 @@
   &--ease4 {
     animation: fade-in 1200s ease-in-out;
   }
-
-
 }

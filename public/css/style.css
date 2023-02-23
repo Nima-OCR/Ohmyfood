@@ -35,6 +35,15 @@ body {
   color: #000;
   margin: 0;
 }
+@media only screen and (min-width: 600px) {
+  .heading-secondary {
+    width: 100%;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2.5rem;
+    animation: fade-in 2000ms ease-in-out;
+  }
+}
 
 @keyframes moveInLeft {
   from {
@@ -42,6 +51,16 @@ body {
   }
   to {
     transform: scaleX(1);
+  }
+}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
   }
 }
 @keyframes rotate {
@@ -66,13 +85,13 @@ body {
 }
 .smal-card {
   display: flex;
+  justify-content: space-between;
   line-height: 1.25rem;
   background-color: #f7f7f7;
   box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.18);
   border-style: none;
   border-radius: 22px;
   padding: 1.5rem 1rem;
-  margin-left: 15px;
   margin-bottom: 1.5rem;
   cursor: pointer;
 }
@@ -82,6 +101,13 @@ body {
 }
 .smal-card:hover i {
   color: #9356DC;
+}
+@media only screen and (min-width: 600px) {
+  .smal-card:hover i {
+    display: block;
+    color: rgba(147, 86, 220, 0.5);
+    animation: rotate 700ms ease-in-out;
+  }
 }
 .smal-card:hover .check {
   display: flex;
@@ -122,6 +148,11 @@ body {
   background: #FFFFFF;
   border-radius: 20px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+@media only screen and (min-width: 600px) {
+  .card {
+    width: 45%;
+  }
 }
 .card i {
   cursor: pointer;
@@ -264,7 +295,6 @@ body {
 }
 
 .form__input {
-  width: 33%;
   font-size: 1em;
   font-weight: 600;
   background: transparent;
@@ -275,10 +305,14 @@ body {
 .form__input::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.7);
 }
+@media only screen and (min-width: 600px) {
+  .form__input::-webkit-input-placeholder {
+    display: initial;
+  }
+}
 
 .animation--ease1 {
   animation: fade-in 800ms ease-in-out;
-  transition: fader;
 }
 .animation--ease2 {
   animation: fade-in 1000ms ease-in-out;
@@ -294,17 +328,40 @@ body {
   background-color: rgba(0, 0, 0, 0.79);
   padding: 0.4rem 0 1rem 1.5rem;
 }
+@media only screen and (min-width: 600px) {
+  .footer {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+  }
+}
 .footer__footer-heading {
   font-weight: 300;
   color: rgba(255, 255, 255, 0.9);
   font-family: Shrikhand, Roboto, sans-serif;
 }
+@media only screen and (min-width: 600px) {
+  .footer__footer-heading {
+    font-size: 1.5rem;
+  }
+}
 .footer__list {
   padding-left: 0;
   list-style: none;
 }
+@media only screen and (min-width: 600px) {
+  .footer__list {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 .footer__li {
   padding-bottom: 0.3rem;
+}
+@media only screen and (min-width: 600px) {
+  .footer__li {
+    display: flex;
+  }
 }
 .footer__a {
   color: #fff;
@@ -328,6 +385,14 @@ body {
   background-color: #f7f7f7;
   padding: 3.5rem 1.25rem;
 }
+@media only screen and (min-width: 600px) {
+  .row-cards--tab {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
 .row-cards--preview {
   position: relative;
   top: -52px;
@@ -348,6 +413,11 @@ body {
   font-size: 1.85rem;
   padding: 0.9rem;
 }
+@media only screen and (min-width: 600px) {
+  .header__logo {
+    font-size: 2.5rem;
+  }
+}
 .header__logo--preview {
   font-size: 1.7rem;
   padding-left: 0;
@@ -361,9 +431,20 @@ body {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+@media only screen and (min-width: 600px) {
+  .header__search-box {
+    font-size: 1.2rem;
+  }
+}
 .header__fa-map {
   color: #000;
   font-size: 16px;
+}
+@media only screen and (min-width: 600px) {
+  .header__fa-map {
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.5);
+  }
 }
 .header__text-box {
   background: rgba(0, 0, 0, 0.07);
@@ -389,11 +470,30 @@ body {
   padding-top: 1.7rem;
   color: #000;
 }
+@media only screen and (min-width: 600px) {
+  .select-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 1rem;
+    height: 15rem;
+    font-size: 1.2rem;
+    color: #9356DC;
+  }
+}
 
 .choice-steps {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   text-decoration: none;
+}
+@media only screen and (min-width: 600px) {
+  .choice-steps {
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fade-in 2000ms ease-in-out;
+  }
 }
 .choice-steps__fas {
   font-size: 1.3rem;
@@ -401,6 +501,18 @@ body {
   width: 25px;
   height: 25px;
   margin-left: 1.1rem;
+}
+@media only screen and (min-width: 600px) {
+  .choice-steps__fas {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    font-size: 5rem;
+    margin-left: 0;
+    color: #9356DC;
+    animation: fade-in 1000ms ease-in-out;
+  }
 }
 
 .icon-circle {
@@ -419,6 +531,12 @@ body {
   color: #fff;
   border-style: none;
 }
+@media only screen and (min-width: 600px) {
+  .icon-circle__i {
+    display: none;
+    animation: rotate 700ms ease-in-out;
+  }
+}
 
 .d-flex {
   display: flex;
@@ -429,6 +547,13 @@ body {
   font-weight: 700;
   margin: 0;
   padding-left: 1rem;
+}
+@media only screen and (min-width: 600px) {
+  .choose-place-p {
+    text-align: center;
+    padding-left: 0;
+    font-weight: 400;
+  }
 }
 
 .commander {

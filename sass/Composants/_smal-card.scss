@@ -1,15 +1,21 @@
 .smal-card {
   //width: 100%;
   display: flex;
+  justify-content: space-between;
   line-height: 1.25rem;
   background-color: $color-grey-soft;
   box-shadow: 0 .3rem 1rem rgba($color-black, .18);
   border-style: none;
   border-radius: 22px;
   padding: 1.5rem 1rem;
-  margin-left: 15px;
+  //margin-left: 15px;
   margin-bottom: 1.5rem ;
   cursor: pointer;
+
+  @include respond(phone) {
+
+
+  }
 
 
   &:hover  {
@@ -17,6 +23,12 @@
     transition: 700ms ease-in-out;
     i{
       color: $color-primary;
+
+      @include respond(phone) {
+        display: block;
+        color: rgba($color-primary, 0.5);
+        animation: rotate 700ms ease-in-out;
+      }
 
     }
 
@@ -67,5 +79,6 @@
     display: none;
   }
 }
+
 
 
