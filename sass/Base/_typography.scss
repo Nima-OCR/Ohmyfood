@@ -38,11 +38,11 @@ body {
     color: $color-black;
     margin: 0;
 
-    @include respond(phone) {
+    @include respond(tab) {
         width: 100%;
         margin-bottom: 2rem;
         text-align: center;
-        font-size: 2.5rem;
+        font-size: 2rem;
         animation: fade-in 2000ms ease-in-out;
     }
 }

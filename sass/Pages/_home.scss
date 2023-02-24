@@ -1,16 +1,25 @@
 .section-fonctionnement {
   padding: 3rem 1.25rem 2.6rem 1.25rem ;
+  @include respond(desktop)  {
+    padding-left: 3rem ;
+    padding-right: 3rem ;
+  }
+
+  @include respond(big-desktop)  {
+    //padding-left: 5rem ;
+    //padding-right: 5rem ;
+  }
 }
 
 .select-container {
   padding-top: 1.7rem;
   color: $color-black;
 
-  @include respond(phone) {
+  @include respond(tab) {
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
-    gap: 1rem;
+    //flex-direction: row;
+    //gap: 1rem;
     height: 15rem;
 
     font-size: 1.2rem;
@@ -20,6 +29,13 @@
 
   }
 
+  @include respond(desktop) {
+    justify-content: center;
+    width: 94%;
+
+
+
+  }
 
 }
 
@@ -29,7 +45,7 @@
   align-items: center;
   text-decoration: none;
 
-  @include respond(phone) {
+  @include respond(tab) {
     justify-content: center;
 
   flex-wrap: wrap;
@@ -43,14 +59,16 @@
     height: 25px;
     margin-left: 1.1rem;
 
-    @include respond(phone) {
+    @include respond(tab) {
       display: flex;
       justify-content: center;
       width: 100%;
       height: auto;
       font-size: 5rem;
       margin-left: 0;
-      //padding: 1rem;
+      //@include font-awesome-gradient;
+      //background-image: linear-gradient(to bottom, $color-secondary, $color-primary);
+
       color: $color-primary;
 
       animation: fade-in 1000ms ease-in-out;
@@ -69,7 +87,18 @@
   width: 1.5rem;
   height: 1.5rem;
 
+  @include respond(tab) {
+    position: relative;
+    padding: 0.2rem;
+    width: unset;
+    height: unset;
+  }
 
+  @include respond(desktop) {
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+    border-radius: 20%;
+    position: absolute;
+  }
 
   &__i {
 
@@ -78,14 +107,13 @@
     color: $color-white;
     border-style: none;
 
-    @include respond(phone) {
-      display: none;
-      //font-size: 4rem;
-      //padding: 0.2rem;
-      //color: $color-primary;
+    @include respond(tab) {
 
-      animation: rotate 700ms ease-in-out;
-
+      //bottom: 1rem;
+      left: -0.4rem;
+      color: $color-primary;
+      background: $color-grey;
+      font-size: 1.5rem;
     }
     }
   }
@@ -101,10 +129,14 @@
   margin: 0;
   padding-left: 1rem;
 
-  @include respond(phone) {
+  @include respond(tab) {
     text-align: center;
     padding-left: 0;
     font-weight: 400;
+  }
+
+  @include respond(desktop) {
+    font-size: 1rem;
 
   }
 }

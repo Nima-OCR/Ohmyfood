@@ -10,21 +10,31 @@
     border-radius: 20px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 
-    @include respond(phone) {
-
+    @include respond(tab) {
         width: 45%;
     }
+
+    @include respond(desktop) {
+        width: 45%;
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        background-image: linear-gradient(to right bottom, ($color-primary), ($color-grey-soft)),
+        url(images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+    }
+
+
 
     & i {
         cursor: pointer;
 
         &:hover {
             background: $fa-background-color;
-            animation: fill 600ms ease-in-out;
             padding: 1px;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color:transparent;
-            font-weight: bold;
+
+            @include font-awesome-gradient;
+
+            //-webkit-background-clip: text;
+            //-webkit-text-fill-color:transparent;
+            //font-weight: bold;
         }
     }
 
@@ -130,6 +140,7 @@
         font-weight: 900;
         color: $color-black;
         cursor: pointer;
+
 
         &:hover {
             color: $color-primary;
