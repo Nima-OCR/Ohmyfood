@@ -1,23 +1,51 @@
 .header {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  //position: relative;
 
-  @include respond(tab) {
+  //width: 100%;
+  //display: flex;
+  //justify-content: center;
+  //align-items: center;
 
+  @include respond(desktop) {
+    font-size: 2.5rem;
+    //height: 17rem;
+
+    background-image: linear-gradient(
+                    to right bottom,
+                    rgba($color-tertiary, 1),
+                    rgba($color-secondary, 0.5)),
+    url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+
+
+    clip-path: polygon(0 0, 100% 0, 100% 89%, 0% 100%);
+    height: 30rem;
   }
 
-
   &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: Shrikhand, Roboto, sans-serif;
     text-decoration: none;
     color: $color-black;
     font-size: 1.85rem;
     padding: 0.9rem;
 
+
+
     @include respond(tab) {
       font-size: 2.5rem;
+    }
+
+    @include respond(desktop) {
+      position: relative;
+      top: 3rem;
+      //left: 10rem;
+      color: $color-black;
+      font-size: 5rem;
     }
 
     &--preview {
@@ -27,9 +55,23 @@
   }
 
   &__search-container {
+    display: flex;
+    justify-content: center;
     text-align: center;
     background: rgb($color-black, 0.12);
     box-shadow: inset 0px 3px 3px 0px rgba($color-black, .1);
+
+    @include respond(desktop) {
+      width: 100%;
+      position: relative;
+      top: -20rem;
+      background-color: transparent;
+      box-shadow: none;
+
+      //z-index: 1;
+
+
+    }
 }
 
   &__search-box {
@@ -38,6 +80,17 @@
     @include respond(tab) {
       font-size: 1.2rem;
       padding-left: 0rem;
+    }
+
+    @include respond(desktop) {
+
+      //display: flex;
+      //justify-content: right;
+      //top: 9rem;
+      //left:10rem;
+      //position: absolute;
+      //font-size: 3rem;
+
     }
 
   }
@@ -56,10 +109,25 @@
 
 
   &__text-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     //position: absolute;
     background: rgb($color-black, 0.07);
     text-align: center;
-    padding: 2rem 1rem 3.5rem 1rem ;
+    //padding: 2rem 1rem 3.5rem 1rem ;
+    padding: 2rem 1rem 2rem 1rem ;
+
+
+    @include respond(desktop) {
+      position: relative;
+      top: -6rem;
+      background-color: transparent;
+      box-shadow: none;
+
+      //z-index: 1;
+    }
   }
 
   &__i {
@@ -79,3 +147,5 @@
   }
 
 }
+
+

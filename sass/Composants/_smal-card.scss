@@ -10,7 +10,63 @@
   padding: 1.5rem 1rem;
   margin-bottom: 1.5rem ;
   cursor: pointer;
+  overflow: hidden;
 
+  &:hover  {
+
+    @include check;
+    background-color: rgba($color-primary, 0.10);
+    transition: 700ms ease-in-out;
+    i{
+      color: $color-primary;
+
+      @include respond(tab) {
+
+        //display: block;
+        //color: rgba($color-primary, 0.5);
+        //animation: rotate 700ms ease-in-out;
+
+      }
+    }
+
+
+    //.check {
+    //  display: flex;
+    //  justify-content: center;
+    //  align-items: center;
+    //  padding: 1rem 1.3rem;
+    //  position: relative;
+    //  font-size: 1.5rem;
+    //  border-radius: 0 15px 15px 0 ;
+    //  background-color: $color-tertiary;
+    //  //animation: moveInLeft $prog-check-delay linear;
+    //  transition: all 1s;
+    //  overflow: hidden;
+    //
+    //
+    //  & i {
+    //    display:block;
+    //    color: #fff;
+    //    animation: rotate $prog-check-delay ease-in-out;
+    //  }
+    //}
+  }
+}
+
+.smal-card--preview {
+
+  margin-left: 0px;
+  margin-bottom: 0.8rem ;
+  padding:0;
+
+
+  &:hover {
+    background-color: initial;
+  }
+
+  & i {
+    display: none;
+  }
 
   &--sc1 {
     @include respond(tab)  {
@@ -54,68 +110,49 @@
       z-index: 3;
     }
   }
+  @include respond(tab)  {
 
 
-  &:hover  {
-    background-color: rgba($color-primary, 0.10);
-    transition: 700ms ease-in-out;
-    i{
-      color: $color-primary;
+    &__shape {
 
-      @include respond(tab) {
-        display: block;
-        color: rgba($color-primary, 0.5);
-        animation: rotate 700ms ease-in-out;
-      }
-
-    }
-
-    .check {
       display: flex;
       justify-content: center;
-      align-items: center;
-      padding: 1rem 1.3rem;
 
-      //width: 68px;
-      //height: 68px;
+      width: 15rem;
+      height: 15rem;
+      float: left;
       position: relative;
-      //right: 16px;
-      //top: 0px;
-      font-size: 1.5rem;
-
-      border-radius: 0 15px 15px 0 ;
-      background-color: $color-tertiary;
-      transform-origin: right;
+      overflow: hidden;
+      border-radius: 50%;
 
 
 
+      border-radius: 100% 100% 0% 100% / 0% 100% 0% 100%   ;
 
+      //@supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      //  -webkit-clip-path: circle(50% at 50% 50%);
+      //  clip-path: circle(50% at 50% 50%);
+      //  -webkit-shape-outside: circle(50% at 50% 50%);
+      //  shape-outside: circle(50% at 50% 50%);
+      //  border-radius: none;
+      //}
 
-      animation: moveInLeft $prog-check-timing $prog-check-delay ease-in-out;
+      @include respond(desktop) {
 
-
-      & i {
-        display: block;
-        color: #fff;
-        animation: rotate $prog-check-delay ease-in-out;
       }
     }
   }
-}
 
-.smal-card--preview {
-  margin-left: 0px;
-  margin-bottom: 0.8rem ;
-  padding:0;
 
-  &:hover {
-    background-color: initial;
+
+  &--fa-circle-1 {
+    color: #008766;
+    position: absolute;
+    left: 8px;
+
 
   }
 
-  & i {
-    display: none;
-  }
 }
 
 

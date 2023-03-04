@@ -11,11 +11,11 @@ $color-grey-soft: #f7f7f7;
 // FONT
 $default-font-size: 16px;
 
-$prog-check-timing: 450ms;
-$prog-check-delay: 50ms;
+$prog-check-timing: 425ms;
+$prog-check-delay: 425ms;
 
 
-$fa-background-color : linear-gradient(to left, $color-primary, $color-secondary );
+$fa-background-color : linear-gradient(to right, $color-secondary 0%, $color-primary 100%, $color-primary 100%);
 
 
 

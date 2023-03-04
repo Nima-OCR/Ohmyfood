@@ -3,7 +3,7 @@ body {
     font-family: 'Roboto', sans-serif, 'Shrikhand', cursive;
     color: $color-white;
     background-color: $color-white;
-    width: 100%;
+    //width: 100%;
     font-size: 1rem;
     line-height: 1.2;
 }
@@ -28,6 +28,11 @@ body {
         display: block;
         font-size: 1.2rem;
         font-weight: 300;
+
+        @include respond(desktop) {
+            letter-spacing: .2rem;
+            //animation: moveInRight 1s ease-out;
+        }
     }
 }
 
@@ -37,12 +42,16 @@ body {
     font-weight: 900;
     color: $color-black;
     margin: 0;
+    //padding-bottom: 1.5rem;
 
     @include respond(tab) {
         width: 100%;
-        margin-bottom: 2rem;
+        //margin-bottom: 2rem;
         text-align: center;
         font-size: 2rem;
-        animation: fade-in 2000ms ease-in-out;
+        //animation: fade-in 800ms ease-in-out;
     }
+
+
+
 }

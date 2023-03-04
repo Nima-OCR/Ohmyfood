@@ -1,5 +1,6 @@
 
 .footer {
+    position: relative;
     background-color: rgba($color-black, 0.79);
     padding: 0.4rem 0 1rem 1.5rem ;
 
@@ -7,6 +8,27 @@
         display: block;
         padding: 1rem;
         text-align: center;
+
+
+    }
+
+    @include respond(desktop) {
+        width: 96.5%;
+
+        display: block;
+        padding: 1rem;
+        text-align: center;
+
+
+        //flex-direction: column;
+        position: absolute;
+        bottom: 0;
+        height: 15rem;
+        top: 123rem;
+
+        font-size: 1.2rem;
+        //bottom: -10rem;
+        //height: -10rem;
     }
 
     &__footer-heading {
@@ -15,7 +37,12 @@
         font-family: Shrikhand, Roboto, sans-serif;
 
         @include respond(tab) {
-            font-size: 1.5rem;
+            font-size: 2rem;
+        }
+
+        @include respond(desktop) {
+            font-size: 2.5rem;
+            line-height: 1rem;
         }
     }
 
@@ -25,8 +52,24 @@
 
         @include respond(tab) {
             display: flex;
+            flex-direction: column;
+
             justify-content: space-between;
+            padding-left: 1rem;
+            padding-right: 1rem ;
         }
+
+        @include respond(desktop) {
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: space-between;
+            padding-left: 1rem;
+            padding-right: 1rem ;
+
+        }
+
 
     }
 
@@ -35,6 +78,15 @@
 
         @include respond(tab) {
             display: flex;
+            justify-content: center;
+
+        }
+
+        @include respond(desktop) {
+
+            display: flex;
+            justify-content: center;
+
         }
 
     }
@@ -50,11 +102,18 @@
         &--pl {
             padding-left: 0.5rem;
         }
+
+
     }
 
     &__icon {
         font-size: 0.75rem;
         width: 15px;
         height: 15px;
+
+        @include respond(desktop) {
+            font-size: 1.5rem;
+            padding-right: 0.2rem;
+        }
     }
 }

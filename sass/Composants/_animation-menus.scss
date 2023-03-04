@@ -13,6 +13,17 @@
   }
 
   &--ease4 {
-    animation: fade-in 1200s ease-in-out;
+    animation: fade-in 1500s ease-in-out;
+  }
+
+  &--fadeIn {
+    animation: grow 10s ease-in-out 0.15s infinite;
   }
 }
+
+
+
+
+
+
+

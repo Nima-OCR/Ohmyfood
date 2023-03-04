@@ -1,43 +1,48 @@
 .section-fonctionnement {
   padding: 3rem 1.25rem 2.6rem 1.25rem ;
+
+
   @include respond(desktop)  {
-    padding-left: 3rem ;
-    padding-right: 3rem ;
+position: relative;
+    height: 25rem;
+    top: -6rem;
+    padding-top: 5rem;
+    //padding-left: 3rem ;
+    //padding-right: 3rem ;
+    background-image: linear-gradient(
+                    to right bottom,
+                    //rgba($color-primary, 1),
+                    //rgba($color-tertiary, 1),
+                    rgba($color-secondary, 1)),;
+
+    //clip-path: polygon(0 12%, 100% 0, 100% 89%, 0% 100%);
+
+
+
+
   }
 
   @include respond(big-desktop)  {
-    //padding-left: 5rem ;
-    //padding-right: 5rem ;
   }
 }
 
-.select-container {
-  padding-top: 1.7rem;
-  color: $color-black;
-
-  @include respond(tab) {
-    display: flex;
-    justify-content: space-between;
-    //flex-direction: row;
-    //gap: 1rem;
-    height: 15rem;
-
-    font-size: 1.2rem;
-    color: $color-primary;
-
-    //animation: fade-in 300ms ease-in-out;
-
+  .select-container {
+    padding-top: 1.7rem;
+    color: $color-black;
+    @include respond(tab) {
+      display: flex;
+      //justify-content: space-evenly;
+      //flex-direction: row;
+      gap: 2rem;
+      height: 17rem;
+      font-size: 1.2rem;
+      color: $color-primary;
+      //animation: moving 800ms linear;
+    }
+    @include respond(desktop) {
+      justify-content: center;
+    }
   }
-
-  @include respond(desktop) {
-    justify-content: center;
-    width: 94%;
-
-
-
-  }
-
-}
 
 .choice-steps {
   display: flex;
@@ -46,17 +51,60 @@
   text-decoration: none;
 
   @include respond(tab) {
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
 
-  flex-wrap: wrap;
-    animation: fade-in 2000ms ease-in-out;
+
+  //flex-wrap: wrap;
+
+    &:hover {
+      justify-content: center;
+
+      transform: scale(1.2);
+
+      animation: moveInTop 350ms ease-in-out;
+
+
+      .choose-place-p {
+        transform: scale(0.8);
+        color: $color-primary;
+      }
+
+      & .fa-chevron-down {
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+        //display: initial;
+        //letter-spacing: 1px;
+        font-size: 2rem;
+      }
+
+      & .fa-1{
+        display: initial;
+        font-size: 3rem;
+      }
+
+      & .fa-2{
+        display: initial;
+        font-size: 3rem;
+      }
+
+      & .fa-3{
+        display: initial;
+        font-size: 3rem;
+      }
+
+      & .choice-steps__fas {
+        display: none;
+      }
+    }
   }
 
   &__fas {
     font-size: 1.30rem;
     color: rgba($color-black, 0.5);
-    width: 25px;
-    height: 25px;
+    //width: 25px;
+    //height: 25px;
     margin-left: 1.1rem;
 
     @include respond(tab) {
@@ -64,15 +112,12 @@
       justify-content: center;
       width: 100%;
       height: auto;
-      font-size: 5rem;
+      font-size: 3rem;
       margin-left: 0;
       //@include font-awesome-gradient;
       //background-image: linear-gradient(to bottom, $color-secondary, $color-primary);
-
       color: $color-primary;
-
-      animation: fade-in 1000ms ease-in-out;
-
+      //animation: fade-in 1000ms ease-in-out;
     }
   }
 }
@@ -82,16 +127,14 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  left: 22px;
+  left: 8px;
+  //top: 0px;
   border-radius: 50%;
   width: 1.5rem;
   height: 1.5rem;
 
   @include respond(tab) {
-    position: relative;
-    padding: 0.2rem;
-    width: unset;
-    height: unset;
+    display: none;
   }
 
   @include respond(desktop) {
@@ -128,15 +171,31 @@
   font-weight: 700;
   margin: 0;
   padding-left: 1rem;
+  & .fa-chevron-down {
+    display: none;
+  }
+
+  & .fa-1{
+    display: none;
+  }
+  & .fa-2{
+    display: none;
+  }
+  & .fa-3{
+    display: none;
+  }
 
   @include respond(tab) {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    //justify-content: center;
     text-align: center;
-    padding-left: 0;
+    //padding-left: 0;
     font-weight: 400;
   }
 
   @include respond(desktop) {
     font-size: 1rem;
-
   }
 }

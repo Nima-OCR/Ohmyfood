@@ -41,11 +41,12 @@
     <section class="row-cards row-cards--preview">
         <div class="card__main-heading">
             <span class="header__logo header__logo--preview">La palette du goût</span>
-                <i class="card--fa-heart header__i--menu far fa-heart"></i>
+            <i class="card__fa-regular card__fa-regular--relative fa-regular fa-heart"></i>
+<!--                <i class="card__fa-regular  header__i&#45;&#45;menu far fa-heart"></i>-->
         </div>
 
         <!--Start Section Entrée-->
-        <section id="entree">
+        <section id="entree" class="animation--fadeIn">
             <!-- Start Heading -->
             <div class="card--sub card__preview">Entrées</div>
             <div class="card__green-line"></div>
@@ -54,7 +55,7 @@
             <div class="animation">
                 <!-- Start Fricassée d'escargots -->
                 <div class="animation--ease1 smal-card smal-card--preview">
-                    <div class="card__heading card__heading--Menu ">
+                    <div class="card__side card__heading card__heading--Menu ">
                         <div class="card__details">
                             <a class="card__a" href="#">
                                 <div class="card__heading-span card__heading-span--preview">Fricassée d'escargots</div>
@@ -91,10 +92,10 @@
                 <div class="animation--ease3 smal-card smal-card--preview">
                     <div class="card__heading card__heading--Menu ">
                         <div class="card__details">
-                            <a class="card__a" href="#">
+                            <div class="card__a" href="#">
                                 <div class="card__heading-span card__heading-span--preview">Œuf au plat</div>
                                 <div class="card--sub ">Assaisonné à la truffe sur lit de caviar</div>
-                            </a>
+                            </div>
                         </div>
                         <span class="choose-place-p">20€</span>
                     </div>
@@ -110,7 +111,7 @@
         <!--End Section Entrée-->
 
         <!--Start Section Plat-->
-        <section id="plat">
+        <section id="plat" class="animation--ease2">
             <div class="card--sub card__preview card__preview--plat">Plats</div>
             <div class="card__green-line card__green-line--plat"></div>
 
@@ -168,7 +169,7 @@
         <!--End Section Plat-->
 
         <!--Start Section Desserts-->
-        <section id="desserts">
+        <section id="desserts" class="animation--ease1">
 
             <div class="card--sub card__preview">Desserts</div>
             <div class="card__green-line"></div>
