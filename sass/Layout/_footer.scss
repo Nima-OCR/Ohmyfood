@@ -13,18 +13,22 @@
     }
 
     @include respond(desktop) {
-        width: 96.5%;
-
+        //width: 96.5%;
+        //position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
         display: block;
         padding: 1rem;
         text-align: center;
 
 
         //flex-direction: column;
-        position: absolute;
-        bottom: 0;
+        //position: absolute;
+        //bottom: 0;
         height: 15rem;
-        top: 123rem;
+        //top: 114rem;
 
         font-size: 1.2rem;
         //bottom: -10rem;

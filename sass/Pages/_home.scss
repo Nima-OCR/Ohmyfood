@@ -4,9 +4,9 @@
 
   @include respond(desktop)  {
 position: relative;
-    height: 25rem;
-    top: -6rem;
-    padding-top: 5rem;
+    z-index: 1;
+    height: 12rem;
+    //padding-top: 5rem;
     //padding-left: 3rem ;
     //padding-right: 3rem ;
     background-image: linear-gradient(
@@ -34,7 +34,7 @@ position: relative;
       //justify-content: space-evenly;
       //flex-direction: row;
       gap: 2rem;
-      height: 17rem;
+      height: 18rem;
       font-size: 1.2rem;
       color: $color-primary;
       //animation: moving 800ms linear;
@@ -66,7 +66,7 @@ position: relative;
 
 
       .choose-place-p {
-        transform: scale(0.8);
+        transform: scale(1);
         color: $color-primary;
       }
 
@@ -100,6 +100,8 @@ position: relative;
     }
   }
 
+
+
   &__fas {
     font-size: 1.30rem;
     color: rgba($color-black, 0.5);
@@ -120,6 +122,7 @@ position: relative;
       //animation: fade-in 1000ms ease-in-out;
     }
   }
+
 }
 
 .icon-circle {
@@ -138,9 +141,9 @@ position: relative;
   }
 
   @include respond(desktop) {
-    box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
-    border-radius: 20%;
-    position: absolute;
+    //box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+    //border-radius: 20%;
+    //position: absolute;
   }
 
   &__i {
@@ -197,5 +200,7 @@ position: relative;
 
   @include respond(desktop) {
     font-size: 1rem;
+
+
   }
 }
