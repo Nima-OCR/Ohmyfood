@@ -30,29 +30,8 @@
             transform: translateY(-1.5rem) scale(1.03);
             filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.5));
         }
-
-
-
-        //clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-        //background-image: linear-gradient(to right bottom, ($color-primary), ($color-grey-soft)),
-        //url(images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
     }
 
-
-    svg {
-        width: 23px;
-        height: 23px;
-        //fill:transparent;
-        transform-origin: bottom;
-        z-index: -1;
-        position: absolute;
-        right: 0px;
-        top: 0px;
-        display: none;
-        overflow: hidden;
-
-        //transition: all 500ms;
-    }
 
     &__fa-regular {
         font-size: 1.5rem;
@@ -68,14 +47,11 @@
         font-size: 1.29rem;
 
         &--absolute {
-
-
             z-index: -1;
             position: absolute;
             right: 15px;
             top: 191px;
             display: none;
-            //bottom: 25px;
         }
     }
 
@@ -89,63 +65,6 @@
     }
 
 
-
-& i {
-    //overflow: hidden;
-
-}
-
-    //& i {
-
-        //.filled {
-              //position: absolute;
-            //z-index: -1;
-            //
-            //  right: 0px;
-            //  top: 0px;
-            //  display: none;
-            //  overflow: hidden;
-        //}
-        //
-        //    &:hover {
-
-                //animation: test 1200ms ease-out;
-
-                //position: absolute;
-                //overflow: hidden;
-
-                //z-index: -1;
-                //right: 0px;
-                //  top: 0px;
-                //transform-origin: bottom;
-                //transition: transform 0.3s;
-
-                  //display: none;
-
-                //background-image: $fa-background-color;
-                //-webkit-background-clip: text;
-                //-webkit-text-fill-color:transparent;
-                //font-weight: bold;
-                //display: unset;
-
-            //}
-
-            //overflow: hidden;
-            //
-            //display: unset;
-            //fill: url(#my-cool-gradient);
-
-            //fill: url($fa-background-color);
-            //animation: test 1200ms ease-out;
-            //@include font-awesome-gradient;
-
-            //background-color:linear-gradient(to left, $color-secondary 0%, $color-primary 100%, $color-primary 100%);
-            //animation: heart 2s ease-out;
-            //@include font-awesome-gradient;
-
-    //}
-
-
     &__size {
         width: 100%;
         height: 175px;
@@ -156,11 +75,6 @@
         height: 175px;
         border-radius: 20px 20px 0 0;
         object-fit: cover;
-
-        @include respond(desktop) {
-
-            //clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-        }
 
         &--preview {
             width: 100%;
@@ -178,12 +92,6 @@
         background-color: #99E2D0;
         padding: 5px 10px;
         border-radius: 3px;
-
-        @include respond(desktop){
-
-
-
-        }
     }
 
     &__heading {
@@ -233,54 +141,34 @@
         &--fs {
             font-size: 0.9rem;
         }
-
-        @include respond(desktop){
-
-        }
-
-
     }
 
     &__heading-span--preview {
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
-
         font-size: 1.11rem;
         font-weight: 400;
-
-
     }
 
     &--sub {
-
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
-        //width: 17rem;
         text-decoration: none;
         color: $color-black;
         font-weight: 300;
         font-size: 0.95rem;
         margin: 0;
         cursor: pointer;
-
-
     }
 
-
-
     &__details {
-
-        //width: 100%;
-
         display: flex;
         justify-content: space-between;
-
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
-
         //white-space: nowrap;
         //overflow: hidden;
         //text-overflow: ellipsis;
@@ -288,31 +176,18 @@
         //transition: all 425ms;
 
         &:hover {
-
-
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
         }
-
-        //display: inline-block;
-
-        //justify-content: space-between;
-        //align-items: center;
-
     }
 
     &__a {
-
         text-decoration: none;
-
-
         width: 100%;
         //white-space: nowrap;
         //overflow: hidden;
         //text-overflow: ellipsis;
-
-
         //transition: all 1s;
     }
 
@@ -335,7 +210,6 @@
 
         &--plat {
             width: 2.7rem;
-            //margin-left: 2.5rem;
         }
     }
 
@@ -347,52 +221,6 @@
     }
 
     &--home-heart {
-
             align-items: start;
-
-        @include respond(desktop) {
-            //position: absolute;
-            //top: 15rem;
-
-        }
-
     }
-
-    //&--remplissage {
-    //    z-index: -1;
-    //    position: absolute;
-    //    right: 0px;
-    //    top: 0px;
-    //    display: none;
-    //    overflow: hidden;
-    //
-    //
-    //    &:hover {
-    //
-    //        background: linear-gradient(to left, $color-secondary 0%, $color-primary 100%, $color-primary 100%);
-    //
-    //
-    //        display: unset;
-    //
-    //
-    //        animation: test 1200ms ease-out;
-    //
-    //    }
-    //}
-
-
-
-
-
-
 }
-
-.heart {
-    //overflow: hidden;
-}
-//
-//.hidden {
-//    display: none;
-//
-//}
-

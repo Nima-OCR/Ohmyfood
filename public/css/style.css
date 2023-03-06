@@ -423,17 +423,6 @@ body {
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.5));
   }
 }
-.card svg {
-  width: 23px;
-  height: 23px;
-  transform-origin: bottom;
-  z-index: -1;
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  display: none;
-  overflow: hidden;
-}
 .card__fa-regular {
   font-size: 1.5rem;
 }
@@ -565,6 +554,7 @@ body {
 .card--home-heart {
   align-items: start;
 }
+
 .btn {
   display: inline-block;
   text-decoration: none;
