@@ -40,7 +40,7 @@ position: relative;
       //animation: moving 800ms linear;
     }
     @include respond(desktop) {
-      justify-content: center;
+      justify-content: space-evenly;
     }
   }
 
@@ -51,52 +51,13 @@ position: relative;
   text-decoration: none;
 
   @include respond(tab) {
-    flex-direction: column;
-    justify-content: space-evenly;
-
-
-  //flex-wrap: wrap;
+    font-size: 1rem;
+    //flex-direction: column;
+    //justify-content: space-evenly;
 
     &:hover {
       justify-content: center;
 
-      transform: scale(1.2);
-
-      animation: moveInTop 350ms ease-in-out;
-
-
-      .choose-place-p {
-        transform: scale(1);
-        color: $color-primary;
-      }
-
-      & .fa-chevron-down {
-        display: flex;
-        justify-content: center;
-        padding: 1rem;
-        //display: initial;
-        //letter-spacing: 1px;
-        font-size: 2rem;
-      }
-
-      & .fa-1{
-        display: initial;
-        font-size: 3rem;
-      }
-
-      & .fa-2{
-        display: initial;
-        font-size: 3rem;
-      }
-
-      & .fa-3{
-        display: initial;
-        font-size: 3rem;
-      }
-
-      & .choice-steps__fas {
-        display: none;
-      }
     }
   }
 

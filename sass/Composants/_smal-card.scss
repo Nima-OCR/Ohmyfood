@@ -14,25 +14,48 @@
 
   &:hover  {
     @include check;
-
-
     //transform: scale(1.1);
-    background-color: rgba($color-primary, 0.10);
+    background-color: rgba($color-primary, 0.10);//ici
     //transition: 700ms ease-in-out;
-
-
     i{
       color: $color-primary;
-
-      @include respond(tab) {
-
-        //display: block;
-        //color: rgba($color-primary, 0.5);
-        //animation: rotate 700ms ease-in-out;
-
-      }
     }
 
+    @include respond(tab) {
+      //pointer-events: none;
+
+      & .fa-chevron-down {
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+        //display: initial;
+        //letter-spacing: 1px;
+        font-size: 2rem;
+
+      }
+
+      & .fa-1{
+        display: initial;
+        font-size: 3rem;
+      }
+
+      & .fa-2{
+        display: initial;
+        font-size: 3rem;
+      }
+
+      & .fa-3{
+        display: initial;
+        font-size: 3rem;
+      }
+
+      & .choice-steps__fas {
+        display: none;
+      }
+
+      //transform: scale(1.2);
+
+    }
 
     //.check {
     //  display: flex;
@@ -46,7 +69,6 @@
     //  //animation: moveInLeft $prog-check-delay linear;
     //  transition: all 1s;
     //  overflow: hidden;
-    //
     //
     //  & i {
     //    display:block;
@@ -66,6 +88,10 @@
 
   &:hover {
     background-color: initial;
+
+    @include respond(desktop){
+
+    }
   }
 
   & i {
@@ -117,23 +143,25 @@
 
 
   @include respond(tab)  {
-
-
     &__shape {
-
       display: flex;
       justify-content: center;
-
       width: 15rem;
       height: 15rem;
-      float: left;
-      position: relative;
-      overflow: hidden;
-      border-radius: 50%;
+      //position: relative;
+      //overflow: hidden;
+      //border-radius: 100%;
+      transition: all 1s;
+      &:hover {
+
+        box-shadow: 0 1rem 1rem rgba($color-black, .3);
+        transform: scale(1.1);
 
 
-
-      border-radius: 100% 100% 0% 100% / 0% 100% 0% 100%   ;
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba($color-tertiary, 1);
+      }
+    }
 
       //@supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
       //  -webkit-clip-path: circle(50% at 50% 50%);
@@ -142,14 +170,30 @@
       //  shape-outside: circle(50% at 50% 50%);
       //  border-radius: none;
       //}
+  }
 
-      @include respond(desktop) {
-        &:hover {
-          border-radius: 100%;
+  @include respond(desktop) {
+    &__shape {
+      //display: flex;
+      //justify-content: center;
+      //width: 15rem;
+      //height: 15rem;
+      //float: left;
+      //position: relative;
+      overflow: hidden;
+      border-radius: 50%;
+      border-radius: 100% 100% 0% 100% / 0% 100% 0% 100%;
 
-        }
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 1);
 
-      }
+      &:hover{
+        background-color: transparent;
+
+      };
+
     }
   }
 
