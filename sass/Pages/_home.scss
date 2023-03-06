@@ -6,23 +6,10 @@
 position: relative;
     z-index: 1;
     height: 12rem;
-    //padding-top: 5rem;
-    //padding-left: 3rem ;
-    //padding-right: 3rem ;
+
     background-image: linear-gradient(
                     to right bottom,
-                    //rgba($color-primary, 1),
-                    //rgba($color-tertiary, 1),
                     rgba($color-secondary, 1)),;
-
-    //clip-path: polygon(0 12%, 100% 0, 100% 89%, 0% 100%);
-
-
-
-
-  }
-
-  @include respond(big-desktop)  {
   }
 }
 
@@ -31,13 +18,10 @@ position: relative;
     color: $color-black;
     @include respond(tab) {
       display: flex;
-      //justify-content: space-evenly;
-      //flex-direction: row;
       gap: 2rem;
       height: 18rem;
       font-size: 1.2rem;
       color: $color-primary;
-      //animation: moving 800ms linear;
     }
     @include respond(desktop) {
       justify-content: space-evenly;
@@ -52,22 +36,14 @@ position: relative;
 
   @include respond(tab) {
     font-size: 1rem;
-    //flex-direction: column;
-    //justify-content: space-evenly;
-
     &:hover {
       justify-content: center;
-
     }
   }
-
-
 
   &__fas {
     font-size: 1.30rem;
     color: rgba($color-black, 0.5);
-    //width: 25px;
-    //height: 25px;
     margin-left: 1.1rem;
 
     @include respond(tab) {
@@ -77,13 +53,10 @@ position: relative;
       height: auto;
       font-size: 3rem;
       margin-left: 0;
-      //@include font-awesome-gradient;
-      //background-image: linear-gradient(to bottom, $color-secondary, $color-primary);
       color: $color-primary;
-      //animation: fade-in 1000ms ease-in-out;
+      animation: fade-in 1000ms ease-in-out;
     }
   }
-
 }
 
 .icon-circle {
@@ -101,12 +74,6 @@ position: relative;
     display: none;
   }
 
-  @include respond(desktop) {
-    //box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
-    //border-radius: 20%;
-    //position: absolute;
-  }
-
   &__i {
 
     background: $color-primary;
@@ -115,8 +82,6 @@ position: relative;
     border-style: none;
 
     @include respond(tab) {
-
-      //bottom: 1rem;
       left: -0.4rem;
       color: $color-primary;
       background: $color-grey;
@@ -153,15 +118,11 @@ position: relative;
     width: 100%;
     padding: 0;
     margin: 0;
-    //justify-content: center;
     text-align: center;
-    //padding-left: 0;
     font-weight: 400;
   }
 
   @include respond(desktop) {
     font-size: 1rem;
-
-
   }
 }
