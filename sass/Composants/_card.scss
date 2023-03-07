@@ -12,6 +12,13 @@
 
     transition: transform .3s;
 
+    &--menu {
+        @include respond(tab){
+            //width: 40%;
+            //height: 20rem;
+        }
+    }
+
 
     @include respond(tab) {
         width: 45%;
@@ -101,6 +108,38 @@
         align-items: end;
         padding: 0.85rem ;
 
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+
+        &--Menu {
+
+            @include respond(tab){
+
+                //width: 50%;
+
+
+
+                //align-items: flex-start;
+                //flex-direction: column;
+
+            }
+            //transition:  $prog-check-delay ease-in-out ;
+            //&:hover {
+            //    white-space: nowrap;
+            //    text-overflow: ellipsis;
+            //    overflow: hidden;
+            //    padding-right:1rem;
+        }
+
+        &:hover  .card--sub{
+            //padding-right:1rem;
+            //white-space: nowrap;
+            //overflow: hidden;
+            //text-overflow: ellipsis;
+        }
+    }
+
 
         &:hover {
 
@@ -111,22 +150,7 @@
         //text-overflow: ellipsis;
         //transition: padding-right 450ms ease-in-out;
         //transition: all 0.9s ease-in-out;
-        &--Menu {
-            //transition: all 0.9s ease-in-out;
-            //transition:  $prog-check-delay ease-in-out ;
-            //&:hover {
-            //    white-space: nowrap;
-            //    text-overflow: ellipsis;
-            //    overflow: hidden;
-            //    padding-right:1rem;
-            }
-            &:hover  .card--sub{
-                //padding-right:1rem;
-                //white-space: nowrap;
-                //overflow: hidden;
-                //text-overflow: ellipsis;
-            }
-        }
+
     }
 
     &__heading-span {
@@ -175,6 +199,18 @@
         //width: 250px;
         //transition: all 425ms;
 
+        &--menu {
+            @include respond(tab) {
+
+
+                &:hover {
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+            }
+        }
+
         &:hover {
             white-space: nowrap;
             overflow: hidden;
@@ -197,7 +233,14 @@
         font-size: 1.05rem;
         margin-top: 2rem;
 
-        &--plat {
+        &--menu {
+            @include  respond(tab){
+                font-size: 1.05rem;
+
+
+
+
+            }
             //padding-left: 2.5rem;
         }
     }
@@ -218,6 +261,34 @@
         justify-content: space-between;
         align-items: center;
         padding-right: 1.2rem;
+
+        &--menu {
+
+
+            @include respond(tab){
+
+
+                & i {
+                    font-size: 3rem;
+                    color: $color-black;
+                }
+            }
+
+            @include respond(desktop){
+                flex-direction: column-reverse;
+                align-items: flex-start;
+                padding-right: 0;
+
+                & i {
+                    position: absolute;
+                    top: 5rem;
+                    left: 5rem;
+                    font-size: 4rem;
+                    color: $color-secondary;
+                }
+            }
+        }
+
     }
 
     &--home-heart {

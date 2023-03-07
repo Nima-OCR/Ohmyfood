@@ -48,7 +48,14 @@ body {
   }
 }
 
-@keyframes moveInLeft {}
+@keyframes moveInLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
 @keyframes moveInRight {
   0% {
     opacity: 0;
@@ -266,7 +273,7 @@ body {
   width: 100%;
   background-color: #FFFFFF;
   z-index: -1;
-  transform: translateX(-100%);
+  transform: translateX(100%);
   transition: all 1s;
 }
 .smal-card:hover .check:hover:before {
@@ -479,8 +486,11 @@ body {
   justify-content: space-between;
   align-items: end;
   padding: 0.85rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.card__heading:hover {
+.card:hover {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -522,6 +532,13 @@ body {
   text-overflow: ellipsis;
   overflow: hidden;
 }
+@media only screen and (min-width: 37.5em) {
+  .card__details--menu:hover {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
 .card__details:hover {
   white-space: nowrap;
   overflow: hidden;
@@ -535,6 +552,11 @@ body {
   text-transform: uppercase;
   font-size: 1.05rem;
   margin-top: 2rem;
+}
+@media only screen and (min-width: 37.5em) {
+  .card__preview--menu {
+    font-size: 1.05rem;
+  }
 }
 .card__green-line {
   width: 3rem;
@@ -550,6 +572,26 @@ body {
   justify-content: space-between;
   align-items: center;
   padding-right: 1.2rem;
+}
+@media only screen and (min-width: 37.5em) {
+  .card__main-heading--menu i {
+    font-size: 3rem;
+    color: #000;
+  }
+}
+@media only screen and (min-width: 56.25em) {
+  .card__main-heading--menu {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    padding-right: 0;
+  }
+  .card__main-heading--menu i {
+    position: absolute;
+    top: 5rem;
+    left: 5rem;
+    font-size: 4rem;
+    color: #FF79DA;
+  }
 }
 .card--home-heart {
   align-items: start;
@@ -619,6 +661,31 @@ body {
 }
 .animation--fadeIn {
   animation: grow 10s ease-in-out 0.15s infinite;
+}
+
+@media only screen and (min-width: 37.5em) {
+  .anim-menu {
+    margin: 1rem;
+    background-color: #99E2D0;
+    padding: 0.8rem;
+    border-radius: 15px;
+    transition: 1500ms;
+  }
+  .anim-menu .smal-card {
+    background-color: #f7f7f7;
+  }
+  .anim-menu .card__green-line {
+    border-color: #fff;
+  }
+  .anim-menu:hover {
+    margin-top: 3rem;
+    transform: translateY(-1.5rem) scale(1.05);
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.5));
+    background-color: #99E2D0;
+  }
+  .anim-menu:hover .check {
+    background-color: #000;
+  }
 }
 
 .loader-container {
@@ -705,6 +772,53 @@ body {
 }
 .pictures:hover .pictures__photo:not(:hover) {
   transform: scale(0.95);
+}
+
+.menu {
+  perspective: 150rem;
+  margin-top: 1.1rem;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  background: #FFFFFF;
+  border-radius: 20px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s;
+}
+.menu__side {
+  height: 52rem;
+  transition: all 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+.menu__side--front {
+  background-color: #fff;
+}
+.menu__side--back {
+  transform: rotateY(180deg);
+}
+.menu__side--back-1 {
+  background-image: linear-gradient(to right bottom, #FF79DA, #FF79DA);
+}
+.menu__side--back-2 {
+  background-image: linear-gradient(to right bottom, #9356DC, #9356DC);
+}
+.menu__side--back-3 {
+  background-image: linear-gradient(to right bottom, #99E2D0, #99E2D0);
+}
+.menu:hover .menu__side--front {
+  transform: rotateY(-180deg);
+}
+.menu:hover .menu__side--back {
+  transform: rotateY(0);
 }
 
 .footer {
@@ -836,7 +950,6 @@ body {
   border-radius: 3rem 3rem 0rem 0rem;
   padding: 2rem 1rem 0 1rem;
 }
-
 .header {
   position: relative;
 }
@@ -879,6 +992,13 @@ body {
 .header__logo--preview {
   font-size: 1.7rem;
   padding-left: 0;
+}
+@media only screen and (min-width: 37.5em) {
+  .header__logo--preview {
+    justify-content: flex-start;
+    padding-left: 1rem;
+    width: 100%;
+  }
 }
 .header__search-container {
   display: flex;
@@ -943,7 +1063,6 @@ body {
 .header__i--menu {
   padding-left: 2rem;
 }
-
 .section-fonctionnement {
   padding: 3rem 1.25rem 2.6rem 1.25rem;
 }
@@ -1071,6 +1190,12 @@ body {
 @media only screen and (min-width: 56.25em) {
   .choose-place-p {
     font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 37.5em) {
+  .choose-place-p--menu {
+    width: initial;
+    padding-left: 0;
   }
 }
 

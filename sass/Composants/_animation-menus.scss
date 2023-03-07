@@ -21,6 +21,76 @@
   }
 }
 
+.anim-menu {
+
+    @include respond(tab){
+      //width: 80%;
+      margin: 1rem;
+
+
+      background-color: $color-tertiary;
+      padding: 0.8rem;
+      border-radius: 15px;
+      transition: 1500ms;
+
+      .smal-card {
+        background-color: $color-grey-soft;
+
+      }
+
+      .card__green-line {
+        border-color: $color-white;
+      }
+
+
+
+      &:hover {
+        margin-top: 3rem;
+
+        transform: translateY(-1.5rem) scale(1.05);
+        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.5));
+
+        //transform: scale(1);
+        background-color: $color-tertiary;
+        //padding: 1.5rem;
+
+        .smal-card {
+        }
+
+        .check {
+          background-color: $color-black;
+        }
+
+
+
+      }
+    }
+}
+
+.plat {
+  @include respond(tab){
+    //width: 45%;
+    //flex-wrap: wrap;
+
+
+    //position: absolute;
+    //top: 4rem;
+    //left: 50%;
+  }
+}
+
+.dessert {
+  @include respond(tab){
+    //width: 100%;
+    //position:relative;
+    //top: 30rem;
+  }
+}
+
+
+
+
+
 
 
 

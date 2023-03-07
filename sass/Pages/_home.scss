@@ -94,35 +94,42 @@ position: relative;
   display: flex;
 }
 
-.choose-place-p {
+  .choose-place-p {
 
-  color: $color-black;
-  font-weight: 700;
-  margin: 0;
-  padding-left: 1rem;
-  & .fa-chevron-down {
-    display: none;
-  }
+      color: $color-black;
+      font-weight: 700;
+      margin: 0;
+      padding-left: 1rem;
+      & .fa-chevron-down {
+        display: none;
+      }
 
-  & .fa-1{
-    display: none;
-  }
-  & .fa-2{
-    display: none;
-  }
-  & .fa-3{
-    display: none;
-  }
+      & .fa-1{
+        display: none;
+      }
+      & .fa-2{
+        display: none;
+      }
+      & .fa-3{
+        display: none;
+      }
 
-  @include respond(tab) {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    font-weight: 400;
-  }
+      @include respond(tab) {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        font-weight: 400;
+      }
 
-  @include respond(desktop) {
-    font-size: 1rem;
-  }
+      @include respond(desktop) {
+        font-size: 1rem;
+      }
+
+    &--menu {
+      @include respond(tab){
+        width: initial;
+        padding-left: 0;
+      }
+    }
 }

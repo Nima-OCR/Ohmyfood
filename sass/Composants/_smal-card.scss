@@ -11,7 +11,16 @@
   cursor: pointer;
   overflow: hidden;
 
+
+  &--menu {
+    @include  respond(tab){
+      //width: 80%;
+
+    }
+  }
+
   &:hover  {
+
     @include check;
     background-color: rgba($color-primary, 0.10);//ici
     i{

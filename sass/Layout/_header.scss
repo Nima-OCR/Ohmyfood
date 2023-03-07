@@ -1,4 +1,4 @@
-.header {
+    .header {
   position: relative;
 
   //width: 100%;
@@ -6,7 +6,7 @@
   //justify-content: center;
   //align-items: center;
 
-  @include respond(desktop) {
+      @include respond(desktop) {
     margin-bottom: -5rem;
     background-color: #008766;
     font-size: 2.5rem;
@@ -26,7 +26,7 @@
     height: 30rem;
   }
 
-  &__logo {
+      &__logo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,10 +53,16 @@
     &--preview {
       font-size: 1.7rem;
       padding-left: 0;
+
+      @include respond(tab){
+        justify-content: flex-start;
+        padding-left: 1rem;
+        width: 100%;
+      }
     }
   }
 
-  &__search-container {
+      &__search-container {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -76,7 +82,7 @@
     }
 }
 
-  &__search-box {
+      &__search-box {
     padding: 1rem 0rem 1rem 5rem;
 
     @include respond(tab) {
@@ -98,7 +104,7 @@
 
   }
 
-  &__fa-map {
+      &__fa-map {
     color: $color-black;
     font-size: $default-font-size;
 
@@ -111,7 +117,7 @@
   }
 
 
-  &__text-box {
+      &__text-box {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -134,7 +140,7 @@
     }
   }
 
-  &__i {
+      &__i {
     position: absolute;
     left: 25px;
     top: 20px;
@@ -150,6 +156,12 @@
     }
   }
 
+      //Header Menus
+      .header--menus {
+        @include respond(desktop) {
+
+        }
+      }
+
+
 }
-
-

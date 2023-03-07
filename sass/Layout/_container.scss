@@ -1,37 +1,56 @@
-.row-cards {
-  max-width: 100%;
-  margin: 0 auto;
-  background-color: $color-grey-soft;
-  padding: 3.5rem 1.25rem;
+  .row-cards {
+      max-width: 100%;
+      margin: 0 auto;
+      background-color: $color-grey-soft;
+      padding: 3.5rem 1.25rem;
 
-  @include respond(desktop) {
-    position: relative;
-    //top: -8.5rem;
-    //max-width: 87.5rem;
-    //clip-path: polygon(0 7%, 100% 0, 100% 100%, 0% 100%);
-    height: 37rem;
-    padding-top: 12rem;
-    padding-bottom: 5rem;
-    background-color: rgba($color-primary, 0.10);
-
-
-  }
-
-  &--tab {
-    @include respond(tab) {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 1rem;
+    &--menu {
+      @include respond(tab) {
+        //width: 50%;
+        //display: flex;
+        //justify-content: center;
+        //flex-wrap: nowrap;
+      }
     }
-  }
 
-  &--preview {
-    position: relative;
-    top: -52px;
-    border-radius: 3rem 3rem 0rem 0rem ;
-    padding: 2rem 1rem 0 1rem ;
-  }
 
-}
+      @include respond(desktop) {
+        position: relative;
+        //top: -8.5rem;
+        //max-width: 87.5rem;
+        //clip-path: polygon(0 7%, 100% 0, 100% 100%, 0% 100%);
+        height: 37rem;
+        padding-top: 12rem;
+        padding-bottom: 5rem;
+        background-color: rgba($color-primary, 0.10);
+      }
+
+      &--tab {
+        @include respond(tab) {
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          gap: 1rem;
+        }
+      }
+
+      &--preview {
+          position: relative;
+          top: -52px;
+          border-radius: 3rem 3rem 0rem 0rem ;
+          padding: 2rem 1rem 0 1rem ;
+
+        &--menu {
+          @include respond(tab) {
+
+
+            //display: flex;
+            //justify-content: center;
+            //flex-wrap: nowrap;
+          }
+        }
+      }
+
+
+  }
 
