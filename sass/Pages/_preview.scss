@@ -4,6 +4,16 @@
   align-items: center;
   padding-top: 1.5rem;
 
+  &--menu {
+    @include respond(desktop) {
+      position: absolute;
+      //right: 50%;
+      top: 40rem;
+
+    }
+
+  }
+
 }
 
 main {

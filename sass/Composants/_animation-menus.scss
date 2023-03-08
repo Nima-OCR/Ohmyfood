@@ -23,44 +23,141 @@
 
 .anim-menu {
 
+
+
     @include respond(tab){
       //width: 80%;
       margin: 1rem;
-
-
       background-color: $color-tertiary;
       padding: 0.8rem;
       border-radius: 15px;
-      transition: 1500ms;
+      transition: 2s;
+
+      transform: translateY(-1.5rem) ;
+      filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.5));
+
+
+      .card__preview {
+        margin-top: 0;
+      }
 
       .smal-card {
         background-color: $color-grey-soft;
-
       }
 
       .card__green-line {
         border-color: $color-white;
       }
 
+      &:hover {
+        //margin-top: 3rem;
+        transform: translateY(-1.5rem) ;
+        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.5));
+        //transform: scale(1);
+        background-color: rgba($color-tertiary, 0.3);
 
+        //padding: 1.5rem;
+
+        @include respond(desktop) {
+          background-color: $color-grey-soft;
+
+          .card__green-line {
+            border-color: $color-tertiary;
+          }
+
+          .card__heading-span--preview {
+            color: $color-black;
+          }
+
+          .animation {
+            //transition: all 500ms;
+            //
+            //background-color: $color-tertiary;
+            //padding: 0.25rem;
+            //padding-top: 1rem;
+            //&:hover :nth-child(2) {
+            //  background-color: $color-primary;
+            //
+            //}
+            //&:hover :nth-child(3) {
+            //  background-color: $color-secondary;
+            //
+            //}
+          }
+
+          .card__heading-span--preview {
+            //color: $color-white;
+          }
+
+        }
+
+      }
+    }
+
+    @include respond(desktop) {
+      margin-top: 2rem;
+      margin-right: 0;
+      margin-left: 0;
+      width: 29%;
+      height: 5rem;
+      font-size: 5rem;
+
+
+
+      .card__heading {
+        display: block;
+      }
+
+
+
+
+
+      .card__preview {
+        margin-top: 0;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .card__green-line {
+        width: 100%;
+        //min-width: 16rem;
+        //display: flex;
+        //justify-content: center;
+        //align-items: center;
+      }
 
       &:hover {
-        margin-top: 3rem;
 
-        transform: translateY(-1.5rem) scale(1.05);
-        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.5));
+
+        transform: translateY(-1rem);
+        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+
+        .check {
+
+
+        }
+
+
+
 
         //transform: scale(1);
-        background-color: $color-tertiary;
+        //background-color: $color-tertiary;
         //padding: 1.5rem;
+
+        .animation {
+          //display: initial;
+        }
+
+
+
+        .card__heading-span--preview  {
+        }
+
 
         .smal-card {
         }
-
-        .check {
-          background-color: $color-black;
-        }
-
 
 
       }

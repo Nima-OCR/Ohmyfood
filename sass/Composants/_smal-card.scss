@@ -15,7 +15,10 @@
   &--menu {
     @include  respond(tab){
       //width: 80%;
+    }
 
+    @include  respond(desktop){
+      background-color: #ff79da;
     }
   }
 
@@ -54,6 +57,12 @@
       }
 
       & .choice-steps__fas {
+        display: none;
+      }
+    }
+
+    @include respond(desktop) {
+      .check {
         display: none;
       }
     }

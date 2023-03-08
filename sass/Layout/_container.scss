@@ -4,16 +4,6 @@
       background-color: $color-grey-soft;
       padding: 3.5rem 1.25rem;
 
-    &--menu {
-      @include respond(tab) {
-        //width: 50%;
-        //display: flex;
-        //justify-content: center;
-        //flex-wrap: nowrap;
-      }
-    }
-
-
       @include respond(desktop) {
         position: relative;
         //top: -8.5rem;
@@ -24,6 +14,21 @@
         padding-bottom: 5rem;
         background-color: rgba($color-primary, 0.10);
       }
+
+      &--menu {
+      @include respond(tab) {
+        //width: 80%;
+        //display: flex;
+        //justify-content: center;
+        //flex-wrap: nowrap;
+      }
+
+      @include respond(desktop) {
+        display: flex;
+        flex-wrap: nowrap;
+      }
+    }
+
 
       &--tab {
         @include respond(tab) {
@@ -41,11 +46,14 @@
           padding: 2rem 1rem 0 1rem ;
 
         &--menu {
-          @include respond(tab) {
+          @include respond(desktop) {
+            top: 0;
+            //height: 29rem;
+            justify-content: space-evenly;
+            background-color: initial;
+            padding: 10rem 1rem 0 1rem ;
 
 
-            //display: flex;
-            //justify-content: center;
             //flex-wrap: nowrap;
           }
         }

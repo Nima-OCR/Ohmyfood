@@ -265,3 +265,13 @@
     transform: translateY(0);
   }
 }
+
+@keyframes fade {
+  0% {
+    color: $color-primary;
+  }
+
+  100%{
+    background-color: #008766;
+  }
+}
