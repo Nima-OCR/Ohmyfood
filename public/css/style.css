@@ -1,3 +1,40 @@
+.check .check-anim {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 1.5rem;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+.check .check-anim .choose-place-p {
+  font-size: initial;
+}
+.check .check-anim:before {
+  content: "\f058";
+  font-family: "Font Awesome 5 Free", sans-serif;
+  font-weight: 900;
+  color: white;
+  border-radius: 0 15px 15px 0;
+  background-color: #99E2D0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 20%;
+  transform: translateX(100%);
+  transition: all 0.5s;
+}
+.check .check-anim:before .choose-place-p {
+  padding-right: 4rem;
+}
+.check .check-anim:hover:before {
+  transform: translateX(0);
+}
+
 body {
   margin: 0;
   font-family: "Roboto", sans-serif, "Shrikhand", cursive;
@@ -91,11 +128,10 @@ body {
 }
 @keyframes rotate {
   0% {
-    opacity: 1;
+    transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
-    opacity: 0;
   }
 }
 @keyframes fade-in {
@@ -255,7 +291,6 @@ body {
   border-radius: 22px;
   padding: 1.5rem 1rem;
   margin-bottom: 1.5rem;
-  cursor: pointer;
   overflow: hidden;
 }
 @media only screen and (min-width: 56.25em) {
@@ -265,37 +300,6 @@ body {
 }
 .smal-card:hover {
   background-color: rgba(147, 86, 220, 0.1);
-}
-.smal-card:hover .check {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 1.3rem;
-  position: relative;
-  font-size: 1.5rem;
-  border-radius: 0 15px 15px 0;
-  background-color: #99E2D0;
-  transition: all 500ms;
-  overflow: hidden;
-}
-.smal-card:hover .check:before {
-  content: "";
-  position: absolute;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #FFFFFF;
-  z-index: -1;
-  transform: translateX(100%);
-  transition: all 1s;
-}
-.smal-card:hover .check:hover:before {
-  transform: translateX(0);
-}
-.smal-card:hover .check i {
-  display: block;
-  color: #fff;
-  animation: rotate 425ms ease-in-out;
 }
 .smal-card:hover i {
   color: #9356DC;
@@ -335,6 +339,7 @@ body {
   padding: 0;
 }
 .smal-card--preview:hover {
+  padding-right: 5rem;
   background-color: initial;
 }
 .smal-card--preview i {
@@ -454,7 +459,6 @@ body {
 .card__fa-regular--relative {
   position: relative;
   color: #000;
-  cursor: pointer;
 }
 .card__fa-solid {
   font-size: 1.29rem;
@@ -509,6 +513,7 @@ body {
   justify-content: space-between;
   align-items: end;
   padding: 0.85rem;
+  cursor: pointer;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -516,30 +521,31 @@ body {
 @media only screen and (min-width: 56.25em) {
   .card__heading--Menu {
     position: relative;
+    transition: all 1s;
     overflow: hidden;
   }
   .card__heading--Menu:before {
-    font-family: "Font Awesome 6 Free", serif;
-    font-size: 3rem;
     content: "\f058";
-    color: white;
-    background-color: #99E2D0;
+    font-family: "Font Awesome 6 Free", serif;
+    font-size: 2rem;
+    color: #fff;
+    background-color: rgba(153, 226, 208, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
     left: 0;
-    top: 0.1px;
+    top: 0;
     height: 100%;
     width: 100%;
     transform: translateY(-100%);
-    transition: all 0.5s;
+    transition: all 1s;
   }
   .card__heading--Menu:hover:before {
-    transform: translateY(0);
+    transform: translateY(0rem);
   }
 }
-.card:hover {
+.card__heading:hover {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -551,7 +557,6 @@ body {
   color: #000;
   font-size: 1.1rem;
   font-weight: 900;
-  cursor: pointer;
 }
 .card__heading-span--fs {
   font-size: 0.9rem;
@@ -572,7 +577,6 @@ body {
   font-weight: 300;
   font-size: 0.95rem;
   margin: 0;
-  cursor: pointer;
 }
 .card__details {
   display: flex;
@@ -605,6 +609,15 @@ body {
 @media only screen and (min-width: 37.5em) {
   .card__preview--menu {
     font-size: 1.05rem;
+  }
+}
+@media only screen and (min-width: 56.25em) {
+  .card__preview--menu {
+    margin-top: 0;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 .card__green-line {
@@ -708,6 +721,11 @@ body {
 .animation--fadeIn {
   animation: grow 10s ease-in-out 0.15s infinite;
 }
+@media only screen and (min-width: 56.25em) {
+  .animation--menu {
+    animation: none;
+  }
+}
 
 @media only screen and (min-width: 37.5em) {
   .anim-menu {
@@ -750,19 +768,8 @@ body {
     margin-top: 2rem;
     margin-right: 0;
     margin-left: 0;
-    width: 29%;
+    width: 28%;
     height: 5rem;
-    font-size: 5rem;
-  }
-  .anim-menu .card__heading {
-    display: block;
-  }
-  .anim-menu .card__preview {
-    margin-top: 0;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
   .anim-menu .card__green-line {
     width: 100%;
@@ -770,6 +777,9 @@ body {
   .anim-menu:hover {
     transform: translateY(-1rem);
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  }
+  .anim-menu:hover .card__heading {
+    padding-right: 1rem;
   }
 }
 
@@ -1273,6 +1283,7 @@ body {
   color: #000;
   font-weight: 700;
   margin: 0;
+  padding-right: 0.05rem;
   padding-left: 1rem;
 }
 .choose-place-p .fa-chevron-down {

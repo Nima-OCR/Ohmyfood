@@ -8,7 +8,7 @@
   border-radius: 22px;
   padding: 1.5rem 1rem;
   margin-bottom: 1.5rem ;
-  cursor: pointer;
+  //cursor: pointer;
   overflow: hidden;
 
 
@@ -19,12 +19,17 @@
 
     @include  respond(desktop){
       background-color: #ff79da;
+
     }
   }
 
   &:hover  {
+    //transition: all 1s;
+    //
+    //padding-right: 5rem;
 
-    @include check;
+
+    //@include check;
     background-color: rgba($color-primary, 0.10);//ici
     i{
       color: $color-primary;
@@ -75,6 +80,10 @@
   padding:0;
 
   &:hover {
+
+    padding-right: 5rem;
+
+
     background-color: initial;
 
     @include respond(desktop){

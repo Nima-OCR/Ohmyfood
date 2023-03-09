@@ -8,8 +8,14 @@
     background: #FFFFFF;
     border-radius: 20px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    //cursor: pointer;
 
     transition: transform .3s;
+
+    &:hover {
+
+    }
+
 
     &--menu {
         @include respond(tab){
@@ -45,7 +51,7 @@
         &--relative {
             position: relative;
             color: $color-black;
-            cursor: pointer;
+            //cursor: pointer;
         }
     }
 
@@ -112,12 +118,26 @@
         justify-content: space-between;
         align-items: end;
         padding: 0.85rem ;
+        cursor: pointer;
 
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
 
+        &:hover {
+
+
+
+
+
+
+
+        }
+
+
+
         &--Menu {
+
 
             @include respond(tab){
 
@@ -139,52 +159,54 @@
 
             @include respond(desktop) {
                 position: relative;
-                //transition: all 3s;
+                transition: all 1s;
                 overflow: hidden;
 
+
                 &:before {
-                    font-family: "Font Awesome 6 Free", serif; font-size: 3rem; content: "\f058" ;
-                    color: white;
-                    background-color: $color-tertiary;
+                    content: "\f058" ;
+                    font-family: "Font Awesome 6 Free", serif;
+                    font-size: 2rem;
+                    color: $color-white;
+                    background-color: rgba($color-tertiary, 0.5);
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     position: absolute;
                     left: 0;
-                    top: 0.1px;
+                    top: 0;
                     height: 100%;
                     width: 100%;
                     transform: translateY(-100%);
-                    transition:all .5s;
+                    transition:all 1s;
                 }
+
+
 
                 &:hover:before {
-                    transform: translateY(0);
+                    transform: translateY(0rem);
                 }
+
+
+
+
+
+
+
+
             }
-
         }
-
-        &:hover  .card--sub{
-            //padding-right:1rem;
-            //white-space: nowrap;
-            //overflow: hidden;
-            //text-overflow: ellipsis;
-        }
-    }
-
 
         &:hover {
 
             white-space: nowrap;
             text-overflow: ellipsis;
             overflow: hidden;
-            //padding-right:1rem;
-        //text-overflow: ellipsis;
-        //transition: padding-right 450ms ease-in-out;
-        //transition: all 0.9s ease-in-out;
+        }
 
     }
+
+
 
     &__heading-span {
         white-space: nowrap;
@@ -194,7 +216,7 @@
         color: $color-black;
         font-size: 1.1rem;
         font-weight: 900;
-        cursor: pointer;
+        //cursor: pointer;
         &--fs {
             font-size: 0.9rem;
         }
@@ -217,7 +239,7 @@
         font-weight: 300;
         font-size: 0.95rem;
         margin: 0;
-        cursor: pointer;
+        //cursor: pointer;
     }
 
     &__details {
@@ -271,12 +293,15 @@
         &--menu {
             @include  respond(tab){
                 font-size: 1.05rem;
-
-
-
-
             }
-            //padding-left: 2.5rem;
+
+            @include respond(desktop) {
+                margin-top: 0;
+                font-size: 1.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
         }
     }
 

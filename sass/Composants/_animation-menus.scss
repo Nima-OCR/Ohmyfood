@@ -1,181 +1,187 @@
+//Start animation
 .animation {
 
-  &--ease1 {
-    animation: fade-in 800ms ease-in-out;
-  }
+    &--ease1 {
+      animation: fade-in 800ms ease-in-out;
+    }
 
-  &--ease2 {
-    animation: fade-in 1000ms ease-in-out;
-  }
+    &--ease2 {
+      animation: fade-in 1000ms ease-in-out;
+    }
 
-  &--ease3 {
-    animation: fade-in 1200ms ease-in-out ;
-  }
+    &--ease3 {
+      animation: fade-in 1200ms ease-in-out ;
+    }
 
-  &--ease4 {
-    animation: fade-in 1500s ease-in-out;
-  }
+    &--ease4 {
+      animation: fade-in 1500s ease-in-out;
+    }
 
-  &--fadeIn {
-    animation: grow 10s ease-in-out 0.15s infinite;
-  }
+    &--fadeIn {
+      animation: grow 10s ease-in-out 0.15s infinite;
+    }
+
+    &--menu {
+
+      @include respond(desktop) {
+        animation: none;
+
+      }
+
+    }
 }
+//End animation
 
+//Start anim-menu
 .anim-menu {
 
-
-
+    //Start Tab
     @include respond(tab){
-      //width: 80%;
-      margin: 1rem;
-      background-color: $color-tertiary;
-      padding: 0.8rem;
-      border-radius: 15px;
-      transition: 2s;
-
-      transform: translateY(-1.5rem) ;
-      filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.5));
-
-
-      .card__preview {
-        margin-top: 0;
-      }
-
-      .smal-card {
-        background-color: $color-grey-soft;
-      }
-
-      .card__green-line {
-        border-color: $color-white;
-      }
-
-      &:hover {
-        //margin-top: 3rem;
+        //width: 80%;
+        margin: 1rem;
+        background-color: $color-tertiary;
+        padding: 0.8rem;
+        border-radius: 15px;
+        transition: 2s;
         transform: translateY(-1.5rem) ;
         filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.5));
-        //transform: scale(1);
-        background-color: rgba($color-tertiary, 0.3);
 
-        //padding: 1.5rem;
-
-        @include respond(desktop) {
-          background-color: $color-grey-soft;
-
-          .card__green-line {
-            border-color: $color-tertiary;
-          }
-
-          .card__heading-span--preview {
-            color: $color-black;
-          }
-
-          .animation {
-            //transition: all 500ms;
-            //
-            //background-color: $color-tertiary;
-            //padding: 0.25rem;
-            //padding-top: 1rem;
-            //&:hover :nth-child(2) {
-            //  background-color: $color-primary;
-            //
-            //}
-            //&:hover :nth-child(3) {
-            //  background-color: $color-secondary;
-            //
-            //}
-          }
-
-          .card__heading-span--preview {
-            //color: $color-white;
-          }
-
+        .card__preview {
+          margin-top: 0;
         }
-
-      }
-    }
-
-    @include respond(desktop) {
-      margin-top: 2rem;
-      margin-right: 0;
-      margin-left: 0;
-      width: 29%;
-      height: 5rem;
-      font-size: 5rem;
-
-
-
-      .card__heading {
-        display: block;
-      }
-
-
-
-
-
-      .card__preview {
-        margin-top: 0;
-        font-size: 1.5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .card__green-line {
-        width: 100%;
-        //min-width: 16rem;
-        //display: flex;
-        //justify-content: center;
-        //align-items: center;
-      }
-
-      &:hover {
-
-
-        transform: translateY(-1rem);
-        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-
-        .check {
-
-
-        }
-
-
-
-
-        //transform: scale(1);
-        //background-color: $color-tertiary;
-        //padding: 1.5rem;
-
-        .animation {
-          //display: initial;
-        }
-
-
-
-        .card__heading-span--preview  {
-        }
-
 
         .smal-card {
+          background-color: $color-grey-soft;
         }
 
+        .card__green-line {
+          border-color: $color-white;
+        }
 
-      }
+        &:hover {
+            //margin-top: 3rem;
+            transform: translateY(-1.5rem) ;
+            filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.5));
+            //transform: scale(1);
+            background-color: rgba($color-tertiary, 0.3);
+            //padding: 1.5rem;
+
+            @include respond(desktop) {
+
+            background-color: $color-grey-soft;
+
+                .card__green-line {
+                  border-color: $color-tertiary;
+                }
+
+                .card__heading-span--preview {
+                  color: $color-black;
+                }
+
+                .animation {
+                  //transition: all 500ms;
+                  //
+                  //background-color: $color-tertiary;
+                  //padding: 0.25rem;
+                  //padding-top: 1rem;
+                  //&:hover :nth-child(2) {
+                  //  background-color: $color-primary;
+                  //
+                  //}
+                  //&:hover :nth-child(3) {
+                  //  background-color: $color-secondary;
+                  //
+                  //}
+                }
+
+                .card__heading-span--preview {
+                  //color: $color-white;
+                }
+
+            }
+        }
     }
-}
+    //End Tab
 
+    //Start Desktop
+    @include respond(desktop) {
+        //transition: 0ms;
+        //transform: translateY(0rem) ;
+        margin-top: 2rem;
+        margin-right: 0;
+        margin-left: 0;
+        width: 28%;
+        height: 5rem;
+        //font-size: 5rem;
+
+
+
+            .card__preview {
+
+            }
+
+            .card__green-line {
+              width: 100%;
+              //min-width: 16rem;
+              //display: flex;
+              //justify-content: center;
+              //align-items: center;
+            }
+
+            &:hover {
+              transform: translateY(-1rem);
+              filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+
+              .card__heading {
+                padding-right: 1rem;
+              }
+
+              //.check {
+              //
+              //
+              //}
+
+
+
+
+              //transform: scale(1);
+              //background-color: $color-tertiary;
+              //padding: 1.5rem;
+
+              .animation {
+                //display: initial;
+              }
+
+
+
+              .card__heading-span--preview  {
+              }
+
+
+              .smal-card {
+              }
+
+
+            }
+    }
+    //End Desktop
+
+}
+//End anim-menu
+
+//Start Plat
 .plat {
   @include respond(tab){
     //width: 45%;
     //flex-wrap: wrap;
-
-
     //position: absolute;
     //top: 4rem;
     //left: 50%;
   }
 }
+//End Plat
 
+//Start Dessert
 .dessert {
   @include respond(tab){
     //width: 100%;
@@ -183,8 +189,7 @@
     //top: 30rem;
   }
 }
-
-
+//End Dessert
 
 
 

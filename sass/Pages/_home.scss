@@ -99,7 +99,10 @@ position: relative;
       color: $color-black;
       font-weight: 700;
       margin: 0;
+      padding-right: .05rem;
       padding-left: 1rem;
+
+
       & .fa-chevron-down {
         display: none;
       }
