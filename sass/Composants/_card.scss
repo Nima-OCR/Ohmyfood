@@ -12,9 +12,7 @@
 
     transition: transform .3s;
 
-    &:hover {
 
-    }
 
 
     &--menu {
@@ -45,36 +43,36 @@
     }
 
 
-    &__fa-regular {
-        font-size: 1.5rem;
-
-        &--relative {
-            position: relative;
-            color: $color-black;
-            //cursor: pointer;
-        }
-    }
-
-    &__fa-solid {
-        font-size: 1.29rem;
-
-        &--absolute {
-            z-index: -1;
-            position: absolute;
-            right: 15px;
-            top: 191px;
-            display: none;
-        }
-    }
-
-    &:hover &__fa-solid--absolute {
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: bold;
-        background-image: $fa-background-color;
-
-        animation: blink 4s ease-in-out;
-    }
+    //&__fa-regular {
+    //    font-size: 1.5rem;
+    //
+    //    &--relative {
+    //        position: relative;
+    //        color: $color-black;
+    //        //cursor: pointer;
+    //    }
+    //}
+    //
+    //&__fa-solid {
+    //    font-size: 1.29rem;
+    //
+    //    &--absolute {
+    //        z-index: -1;
+    //        position: absolute;
+    //        right: 15px;
+    //        top: 191px;
+    //        display: none;
+    //    }
+    //}
+    //
+    //&:hover &__fa-solid--absolute {
+    //    -webkit-background-clip: text;
+    //    -webkit-text-fill-color: transparent;
+    //    font-weight: bold;
+    //    background-image: $fa-background-color;
+    //
+    //    animation: blink 4s ease-in-out;
+    //}
 
 
     &__size {
