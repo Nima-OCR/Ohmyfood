@@ -34,23 +34,27 @@
 <!--Start Main-->
 <main>
     <!--Start Image Menu-->
-    <img class="card__picture--preview" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
+    <img class="card__picture--preview card__picture--preview--menu" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
     <!--End Image Menu-->
 
     <!--Start Section Menu-->
-    <section class="row-cards row-cards--preview">
-        <div class="card__main-heading">
-            <span class="header__logo header__logo--preview">Le délice des sens</span>
+    <section class="row-cards row-cards--menu row-cards--preview row-cards--preview--menu ">
+        <div class="card__main-heading card__main-heading--menu ">
+            <span class="header__logo header__logo--preview header__logo--preview--menu">
+                Le délice des sens
             <div class="heart"></div>
+
+            </span>
         </div>
 
         <!--Start Section Entrée-->
-        <section id="entree">
+        <section id="entree" class="animation--fadeIn card--sub--menu anim-menu ">
             <!-- Start Heading -->
-            <div class="card--sub card__preview">Entrées</div>
+            <h2 class="card--sub  card__preview card__preview--menu">Entrées</h2>
             <div class="card__green-line"></div>
             <!-- End Heading -->
 
+            <div class="animation animation--menu">
             <!-- Start Tartare de thon -->
             <div class="check">
                 <div class="check-anim animation--ease1 smal-card smal-card--preview smal-card--menu">
@@ -112,8 +116,8 @@
         <!--End Section Entrée-->
 
         <!--Start Section Plat-->
-        <section id="plat">
-            <div class="card--sub card__preview card__preview--plat">Plats</div>
+        <section id="plat" class="animation--ease2 anim-menu">
+            <div class="card--sub card__preview card__preview--plat card__preview--menu">Plats</div>
             <div class="card__green-line card__green-line--plat"></div>
 
             <!-- Start Poulet rôti aux herbes de Provence -->
@@ -176,8 +180,8 @@
         <!--End Section Plat-->
 
         <!--Start Section Desserts-->
-        <section id="desserts">
-            <div class="card--sub card__preview">Desserts</div>
+        <section id="desserts" class="animation--ease1 anim-menu">
+            <div class="card--sub card__preview card__preview--menu">Desserts</div>
             <div class="card__green-line"></div>
 
             <!-- Start Farandole de desserts -->
@@ -240,7 +244,7 @@
         <!--End Section Desserts-->
 
         <!--Start Bouton commander-->
-        <div class="commander">
+        <div class="commander commander--menu">
             <a href="#" class="btn btn__preview">Commander</a>
         </div>
         <!--End Bouton commander-->

@@ -93,7 +93,7 @@
 
             &--menu {
                 @include respond(desktop) {
-                    display: none;
+                    //display: none;
                 }
             }
         }
@@ -155,44 +155,36 @@
             //    padding-right:1rem;
 
 
-            @include respond(desktop) {
-                position: relative;
-                transition: all 1s;
-                overflow: hidden;
-
-
-                &:before {
-                    content: "\f058" ;
-                    font-family: "Font Awesome 6 Free", serif;
-                    font-size: 2rem;
-                    color: $color-white;
-                    background-color: rgba($color-tertiary, 0.5);
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    height: 100%;
-                    width: 100%;
-                    transform: translateY(-100%);
-                    transition:all 1s;
-                }
-
-
-
-                &:hover:before {
-                    transform: translateY(0rem);
-                }
-
-
-
-
-
-
-
-
-            }
+            //@include respond(desktop) {
+            //    position: relative;
+            //    transition: all 1s;
+            //    overflow: hidden;
+            //
+            //
+            //    &:before {
+            //        content: "\f058" ;
+            //        font-family: "Font Awesome 6 Free", serif;
+            //        font-size: 2rem;
+            //        color: $color-white;
+            //        background-color: rgba($color-tertiary, 0.5);
+            //        display: flex;
+            //        align-items: center;
+            //        justify-content: center;
+            //        position: absolute;
+            //        left: 0;
+            //        top: 0;
+            //        height: 100%;
+            //        width: 100%;
+            //        transform: translateY(-100%);
+            //        transition:all 1s;
+            //    }
+            //
+            //    &:hover:before {
+            //        transform: translateY(0rem);
+            //    }
+            //
+            //
+            //}
         }
 
         &:hover {
@@ -318,7 +310,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-right: 1.2rem;
+        //padding-right: 1.2rem;
 
         &--menu {
 

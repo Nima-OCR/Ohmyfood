@@ -6,6 +6,22 @@
   width: 26px;
   position: relative;
   //border: 1px solid white;
+
+  @include respond(tab) {
+    //display: block;
+    //height: 36px;
+    //width: 36px;
+    //position: absolute;
+    ////left: 20rem;
+    //right: 3rem;
+    //top: 2.5rem;
+    //padding: 1rem;
+
+  }
+
+  @include respond(desktop) {
+    //display: none;
+  }
 }
 
 .heart:before,

@@ -12,7 +12,7 @@
         height: 37rem;
         padding-top: 12rem;
         padding-bottom: 5rem;
-        background-color: rgba($color-primary, 0.10);
+        //background-color: rgba($color-primary, 0.10);
       }
 
       &--menu {
@@ -47,11 +47,11 @@
 
         &--menu {
           @include respond(desktop) {
-            top: 0;
-            //height: 29rem;
+            //top: 0;
+            height: 29rem;
+            padding-top: 8rem;
             justify-content: space-evenly;
-            background-color: initial;
-            padding: 10rem 1rem 0 1rem ;
+            background-color: $color-grey-soft;
 
 
             //flex-wrap: nowrap;
