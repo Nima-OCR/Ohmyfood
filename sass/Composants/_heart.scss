@@ -1,221 +1,27 @@
-//.fa-regular {
-//  color: #FFF;
-//  background-color: #000;
-//  padding:.2em;
-//  font-size: 1.5rem;
-//  position: relative;
-//  transition:  1200ms ease;
-//
-//
-//}
-//.fa-regular:before {
-//  content: "\f004";
-//  font-weight: bold;
-//  transition: background-color 1200ms ease;
-//}
-//.fa-regular:hover:before{
-//
-//
-//
-//  background: linear-gradient(59deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 61%);
-//
-//  -webkit-background-clip: text;
-//  -webkit-text-fill-color: transparent;
-//
-//
-//
-//  cursor: pointer;
-//}
-
-//.heart {
-//  position: relative;
-//  .fa-regular {
-//
-//    color: $color-black;
-//    font-size: 1.7rem;
-//  }
-//
-//  .fa-solid:before {
-//    font-size: 1.4rem;
-//    right: 0;
-//    top: 0;
-//    position: absolute;
-//    transition: all 1s;
-//  }
-//
-//  .fa-solid:hover:before{
-//    cursor: pointer;
-//  }
-//
-//  .fa-solid:hover {
-//    font-weight: bold;
-//    -webkit-background-clip: text;
-//    -webkit-text-fill-color: transparent;
-//    background-image: $fa-background-color;
-//
-//  }
-//
-//}
-
-//.heart {
-//  position: relative;
-//
-//  .fa-regular {
-//    color: $color-black;
-//    font-size: 1.7rem;
-//    padding:.2em;
-//  }
-//  .fa-regular:before {
-//    content: "\f004";
-//
-//
-//    font-weight: bold;
-//    transition: color 1250ms ease-out;
-//  }
-//
-//  .fa-regular:hover:before{
-//  color: #008766;
-//    cursor: pointer;
-//  }
-//
-//
-//}
-
-//.heart {
-//  position: relative;
-//  .fa-regular {
-//    color: #FFF;
-//    background-color: #fff;
-//    border-radius: 50%;
-//    padding:.2em;
-//    font-size: 2rem;
-//  }
-//  .fa-regular::before {
-//    content: "\f004";
-//    //font-weight: bold;
-//    color: $color-black;
-//    position: absolute;
-//
-//  }
-//  .fa-regular:hover::before{
-//    color: #008766;
-//    cursor: pointer;
-//  }
-//
-//  .fa-solid {
-//    color: #FFF;
-//    background-color: #fff;
-//    border-radius: 50%;
-//    padding:.2em;
-//    font-size: 2rem;
-//  }
-//  .fa-solid::before {
-//    content: "\f004";
-//    font-weight: bold;
-//    transition: color 1s ease-out;
-//    position: absolute;
-//    right: 0.14rem;
-//    z-index: -1;
-//
-//
-//  }
-//  //.fa-solid:hover::before{
-//  //  color: red;
-//  //  cursor: pointer;
-//  //}
-//
-//}
-
-
-//.heart {
-//  font-size: 1.7rem;
-//  position: relative;
-//  //overflow: hidden;
-//  padding: 1px;
-//
-//
-//  .fa-regular {
-//    color: black;
-//
-//  }
-//
-//  .fa-regular:before {
-//    position: absolute ;
-//    color: palegreen;
-//    right: 0rem;
-//    z-index: -1;
-//    transition: color 1s ease-out;
-//
-//  }
-//
-//  .fa-regular:hover:before {
-//    color: #008766;
-//    cursor: pointer;
-//  }
-//}
-
-//.heart {
-//  position: relative;
-//
-//  .fa-solid {
-//    color: black;
-//    right: 1rem;
-//    font-size: 1.6rem;
-//    position: absolute;
-//
-//    .fa-solid:before,
-//    .fa-solid:after{
-//      content: "\f004";
-//      position: absolute;
-//      top: 0;
-//      right: 0;
-//      bottom: 0;
-//      left: 0;
-//      z-index: -1;
-//      transform-origin: bottom;
-//      transition: transform 0.3s;
-//    }
-//    .fa-solid:after{
-//      color: #008766;
-//      transform: scaleY(0);
-//    }
-//    .fa-solid:before{
-//      background: red;
-//      transform-origin: top;
-//    }
-//    .fa-solid:hover:before{
-//      transform: scaleY(0);
-//    }
-//    .fa-solid:hover:after{
-//      transform: scaleY(1);
-//    }
-//  }
-//}
-
 .heart {
   background-image: url("/images/heart-regular.svg") ;
   background-size: contain;
   display: block;
-  height: 50px;
-  width: 50px;
+  height: 26px;
+  width: 26px;
   position: relative;
   border: 1px solid white;
-
 }
+
 .heart:before,
 .heart:after{
   content: "";
-  width: 44px;
-  height: 44px;
+  width: 24px;
+  height: 24px;
   position: absolute;
-  top: 0.1rem;
+  top: 0rem;
   right: 0;
   bottom: 0;
-  left: 0.1rem;
+  left: 0.01rem;
   z-index: -1;
   transform-origin: bottom;
-
 }
+
 .heart:after{
   background-image: url("/images/heart-solid.svg") ;
   display: none;
@@ -223,14 +29,9 @@
 .heart:before{
   background: white;
   transform-origin: top;
-
 }
 
 .heart:hover:after{
-  animation: fadeIn 1s ease-in-out;
+  animation: fadeIn 1s linear forwards;
   display: revert;
 }
-
-
-
-

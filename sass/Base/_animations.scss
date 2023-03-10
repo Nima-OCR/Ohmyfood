@@ -282,15 +282,24 @@
 @keyframes fadeIn {
 
   0% {
+
+
     transform: scale(0);
     opacity: 0;
   }
 
-  50% {
+  30% {
+
     opacity: 0.2;
   }
 
+  50% {
+
+    opacity: 0.3;
+  }
+
   70% {
+
     opacity: 0.3;
   }
   100% {
