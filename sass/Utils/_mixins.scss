@@ -152,7 +152,6 @@
 
 .check {
 
-
   .check-anim {
     display: flex;
     justify-content: center;
@@ -165,28 +164,30 @@
 
     .choose-place-p {
       font-size: initial;
-
     }
   }
 
 
+  & .check-anim:before {
+    content: '';
 
-  .check-anim:before {
-    content: "\f058";
-    font-family: "Font Awesome 5 Free", sans-serif;
-    font-weight: 900;
-    color: #fff;
+    //content: "\f058";
+    //font-family: "Font Awesome 5 Free", sans-serif;
+    //font-weight: bold;
+    //color: $color-white;
+    ////color: transparent;
+    //display: flex;
+    //align-items: center;
+    //justify-content: center;
     border-radius: 0 15px 15px 0 ;
     background-color: $color-tertiary;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: absolute;
+    //background-color: transparent;
     right: 0;
     top: 0;
     height: 100%;
     width: 4rem;
-    transform: translateX(100%);
+    transform: translateX(100%) ;
     transition:all .5s;
 
 
@@ -196,12 +197,52 @@
   }
 
 
+  & .check-anim:after {
+    content: '\f058';
+    font-family: "Font Awesome 5 Free", sans-serif;
+    font-weight: bold;
+    //color: red;
+    position: absolute;
+    //content: "\f058";
+    //font-family: "Font Awesome 5 Free", sans-serif;
+    //font-weight: bold;
+    color: $color-white;
+    ////color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 15px 15px 0 ;
+    //background-color: $color-tertiary;
+    //background-color: transparent;
+    right: 0;
+    top: 0.01rem;
+    height: 100%;
+    width: 4rem;
+    transform: translateX(100%) rotate(0) ;
+    transition:all .5s;
 
 
-  .check-anim:hover:before {
+    .choose-place-p {
+      padding-right: 4rem;
+    }
+
+  }
+
+
+  & .check-anim:hover:before {
     transform: translateX(0);
   }
 
-  @include respond(desktop) {
+  & .check-anim:hover:after {
+    transform: translateX(0) rotate(360deg);
+
+
   }
+
+
+
 }
+
+
+
+

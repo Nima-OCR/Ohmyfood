@@ -11,15 +11,9 @@
   font-size: initial;
 }
 .check .check-anim:before {
-  content: "\f058";
-  font-family: "Font Awesome 5 Free", sans-serif;
-  font-weight: 900;
-  color: #fff;
+  content: "";
   border-radius: 0 15px 15px 0;
   background-color: #99E2D0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: absolute;
   right: 0;
   top: 0;
@@ -31,9 +25,33 @@
 .check .check-anim:before .choose-place-p {
   padding-right: 4rem;
 }
+.check .check-anim:after {
+  content: "\f058";
+  font-family: "Font Awesome 5 Free", sans-serif;
+  font-weight: bold;
+  position: absolute;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 15px 15px 0;
+  right: 0;
+  top: 0.01rem;
+  height: 100%;
+  width: 4rem;
+  transform: translateX(100%) rotate(0);
+  transition: all 0.5s;
+}
+.check .check-anim:after .choose-place-p {
+  padding-right: 4rem;
+}
 .check .check-anim:hover:before {
   transform: translateX(0);
 }
+.check .check-anim:hover:after {
+  transform: translateX(0) rotate(360deg);
+}
+
 body {
   margin: 0;
   font-family: "Roboto", sans-serif, "Shrikhand", cursive;
@@ -570,7 +588,7 @@ body {
 }
 @media only screen and (min-width: 37.5em) {
   .card__preview--menu {
-    font-size: 1.05rem;
+    font-size: 1.2rem;
   }
 }
 @media only screen and (min-width: 56.25em) {
@@ -691,7 +709,7 @@ body {
 @media only screen and (min-width: 37.5em) {
   .anim-menu {
     margin: 1rem;
-    background-color: #99E2D0;
+    background-color: rgba(153, 226, 208, 0.5);
     padding: 0.8rem;
     border-radius: 15px;
     transition: 2s;
@@ -705,6 +723,7 @@ body {
     background-color: #f7f7f7;
   }
   .anim-menu .card__green-line {
+    width: 3.2rem;
     border-color: #fff;
   }
   .anim-menu:hover {

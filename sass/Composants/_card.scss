@@ -282,7 +282,7 @@
 
         &--menu {
             @include  respond(tab){
-                font-size: 1.05rem;
+                font-size: 1.2rem;
             }
 
             @include respond(desktop) {

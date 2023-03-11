@@ -39,8 +39,9 @@
     @include respond(tab){
         //width: 80%;
         margin: 1rem;
-        background-color: $color-tertiary;
-        padding: 0.8rem;
+      background-color: rgba($color-tertiary, 0.5);
+
+      padding: 0.8rem;
         border-radius: 15px;
         transition: 2s;
         transform: translateY(-1.5rem) ;
@@ -55,6 +56,8 @@
         }
 
         .card__green-line {
+          width: 3.2rem;
+
           border-color: $color-white;
         }
 
