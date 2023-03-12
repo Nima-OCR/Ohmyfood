@@ -62,12 +62,9 @@
         }
 
         &:hover {
-            //margin-top: 3rem;
             transform: translateY(-1.5rem) ;
             filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.5));
-            //transform: scale(1);
             background-color: rgba($color-tertiary, 0.3);
-            //padding: 1.5rem;
 
             @include respond(desktop) {
 
@@ -80,27 +77,6 @@
                 .card__heading-span--preview {
                   color: $color-black;
                 }
-
-                .animation {
-                  //transition: all 500ms;
-                  //
-                  //background-color: $color-tertiary;
-                  //padding: 0.25rem;
-                  //padding-top: 1rem;
-                  //&:hover :nth-child(2) {
-                  //  background-color: $color-primary;
-                  //
-                  //}
-                  //&:hover :nth-child(3) {
-                  //  background-color: $color-secondary;
-                  //
-                  //}
-                }
-
-                .card__heading-span--preview {
-                  //color: $color-white;
-                }
-
             }
         }
     }
@@ -108,27 +84,15 @@
 
     //Start Desktop
     @include respond(desktop) {
-        //transition: 0ms;
-        //transform: translateY(0rem) ;
         margin-top: 2rem;
         margin-right: 0;
         margin-left: 0;
         width: 28%;
         height: 5rem;
-        //font-size: 5rem;
 
-
-
-            .card__preview {
-
-            }
 
             .card__green-line {
               width: 100%;
-              //min-width: 16rem;
-              //display: flex;
-              //justify-content: center;
-              //align-items: center;
             }
 
             &:hover {
@@ -139,66 +103,10 @@
                 padding-right: 1rem;
               }
 
-              //.check {
-              //
-              //
-              //}
-
-
-
-
-              //transform: scale(1);
-              //background-color: $color-tertiary;
-              //padding: 1.5rem;
-
-              .animation {
-                //display: initial;
-              }
-
-
-
-              .card__heading-span--preview  {
-              }
-
-
-              .smal-card {
-              }
-
-
             }
     }
     //End Desktop
 
 }
 //End anim-menu
-
-//Start Plat
-.plat {
-  @include respond(tab){
-    //width: 45%;
-    //flex-wrap: wrap;
-    //position: absolute;
-    //top: 4rem;
-    //left: 50%;
-  }
-}
-//End Plat
-
-//Start Dessert
-.dessert {
-  @include respond(tab){
-    //width: 100%;
-    //position:relative;
-    //top: 30rem;
-  }
-}
-//End Dessert
-
-
-
-
-
-
-
-
 
