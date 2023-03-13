@@ -1,21 +1,18 @@
-.section-fonctionnement {
-  padding: 3rem 1.25rem 2.6rem 1.25rem ;
+  .section-fonctionnement {
+    padding: 3rem 1.25rem 2.6rem 1.25rem ;
 
-
-  @include respond(desktop)  {
-position: relative;
-    z-index: 1;
-    height: 12rem;
-
-    background-image: linear-gradient(
-                    to right bottom,
-                    rgba($color-secondary, 1)),;
+    @include respond(desktop)  {
+      position: relative;
+      z-index: 1;
+      height: 12rem;
+      background-image: linear-gradient(to right bottom, rgba($color-secondary, 1));
+    }
   }
-}
 
   .select-container {
     padding-top: 1.7rem;
     color: $color-black;
+
     @include respond(tab) {
       display: flex;
       gap: 2rem;
@@ -23,76 +20,76 @@ position: relative;
       font-size: 1.2rem;
       color: $color-primary;
     }
+
     @include respond(desktop) {
       justify-content: space-evenly;
     }
   }
 
-.choice-steps {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-decoration: none;
-
-  @include respond(tab) {
-    font-size: 1rem;
-    &:hover {
-      justify-content: center;
-    }
-  }
-
-  &__fas {
-    font-size: 1.30rem;
-    color: rgba($color-black, 0.5);
-    margin-left: 1.1rem;
+  .choice-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
 
     @include respond(tab) {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      height: auto;
-      font-size: 3rem;
-      margin-left: 0;
-      color: $color-primary;
-      animation: fade-in 1000ms ease-in-out;
+      font-size: 1rem;
+      &:hover {
+        justify-content: center;
+      }
+    }
+
+    &__fas {
+      font-size: 1.30rem;
+      color: rgba($color-black, 0.5);
+      margin-left: 1.1rem;
+
+      @include respond(tab) {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        font-size: 3rem;
+        margin-left: 0;
+        color: $color-primary;
+        animation: fade-in 1000ms ease-in-out;
+      }
     }
   }
-}
 
-.icon-circle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  left: 8px;
-  //top: 0px;
-  border-radius: 50%;
-  width: 1.5rem;
-  height: 1.5rem;
-
-  @include respond(tab) {
-    display: none;
-  }
-
-  &__i {
-
-    background: $color-primary;
-    font-size: 0.8rem;
-    color: $color-white;
-    border-style: none;
+  .icon-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 8px;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
 
     @include respond(tab) {
-      left: -0.4rem;
-      color: $color-primary;
-      background: $color-grey;
-      font-size: 1.5rem;
+      display: none;
     }
+
+    &__i {
+
+      background: $color-primary;
+      font-size: 0.8rem;
+      color: $color-white;
+      border-style: none;
+
+      @include respond(tab) {
+        left: -0.4rem;
+        color: $color-primary;
+        background: $color-grey;
+        font-size: 1.5rem;
+      }
     }
   }
 
-.d-flex {
-  display: flex;
-}
+  .d-flex {
+    display: flex;
+  }
 
   .choose-place-p {
 
@@ -101,7 +98,6 @@ position: relative;
       margin: 0;
       padding-right: .05rem;
       padding-left: 1rem;
-
 
       & .fa-chevron-down {
         display: none;
@@ -129,10 +125,10 @@ position: relative;
         font-size: 1rem;
       }
 
-    &--menu {
-      @include respond(tab){
-        width: initial;
-        padding-left: 0;
+      &--menu {
+        @include respond(tab){
+          width: initial;
+          padding-left: 0;
+        }
       }
-    }
-}
+  }
