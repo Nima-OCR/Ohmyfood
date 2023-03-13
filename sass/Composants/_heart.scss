@@ -1,5 +1,5 @@
     .heart {
-      background-image: url('../assets/heart-regular.svg?inline') ;
+      background-image: url('~/assets/heart-regular.svg?inline') ;
       height: 26px;
       width: 26px;
       position: relative;
@@ -20,7 +20,7 @@
       }
 
       &:after{
-            background-image: url('../assets/heart-solid.svg?inline') ;
+            background-image: url('~/assets/heart-solid.svg?inline') ;
             display: none;
           }
 
