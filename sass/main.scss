@@ -1,9 +1,11 @@
+//Utils
 @import "Utils/variables";
 @import "Utils/mixins";
 
-
+//Base
 @import "Base/typography", "Base/animations";
 
+//Composants
 @import "Composants/smal-card";
 @import "Composants/card";
 @import "Composants/button";
@@ -11,14 +13,10 @@
 @import "Composants/loader";
 @import "Composants/heart";
 
-
+//Layout
 @import "Layout/footer";
 @import "Layout/container";
 @import "Layout/header";
 
+//Pages
 @import "Pages/home";
-@import "Pages/preview";
-
-
-
-

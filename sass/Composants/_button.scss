@@ -1,26 +1,44 @@
-.btn {
-    display: inline-block;
-    text-decoration: none;
-    font-size: $default-font-size;
-    font-weight: 400;
-    background: linear-gradient($color-secondary, $color-primary);
-    box-shadow: 0 .3rem 1rem rgba($color-black, .3);
-    padding: 1rem 1.37rem;
-    border-radius: 1.5rem;
-    color: rgba($color-white, .9);
-    cursor: pointer;
+  .btn {
+      display: inline-block;
+      text-decoration: none;
+      font-size: $default-font-size;
+      font-weight: 400;
+      background: linear-gradient($color-secondary, $color-primary);
+      box-shadow: 0 .3rem 1rem rgba($color-black, .3);
+      padding: 1rem 1.37rem;
+      border-radius: 1.5rem;
+      color: rgba($color-white, .9);
+      cursor: pointer;
 
-  &:hover {
-    box-shadow: 0 .3rem 1rem rgba($color-black, .5);
-    background: linear-gradient(rgba($color-secondary, 0.8), rgba($color-primary, 0.8)),;
+    &:hover {
+      box-shadow: 0 .3rem 1rem rgba($color-black, .5);
+      background: linear-gradient(rgba($color-secondary, 0.8), rgba($color-primary, 0.8)),;
+    }
+
+    &__preview {
+      padding: 1rem 3.1rem;
+    }
+
+    @include respond(desktop) {
+      justify-content: center;
+    }
   }
 
-  &__preview {
-    padding: 1rem 3.1rem;
-  }
-
-  @include respond(desktop) {
+  .commander {
+    display: flex;
     justify-content: center;
-  }
-}
+    align-items: center;
+    padding-top: 1.5rem;
 
+    &--menu {
+      @include respond(desktop) {
+        position: absolute;
+        top: 30rem;
+      }
+    }
+  }
+
+
+  main {
+    background-color: $color-grey-soft;
+  }
