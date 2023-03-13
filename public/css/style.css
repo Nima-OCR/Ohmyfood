@@ -102,14 +102,6 @@ body {
   }
 }
 
-@keyframes moveInLeft {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0%);
-  }
-}
 @keyframes moveInRight {
   0% {
     opacity: 0;

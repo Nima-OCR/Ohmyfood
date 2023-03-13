@@ -31,7 +31,6 @@ body {
 
         @include respond(desktop) {
             letter-spacing: .2rem;
-            //animation: moveInRight 1s ease-out;
         }
     }
 }
