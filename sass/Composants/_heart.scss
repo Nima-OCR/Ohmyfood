@@ -1,5 +1,5 @@
     .heart {
-      background-image: url("/images/heart-regular.svg") ;
+      background-image: url("/images/heart-regular.svg?inline") ;
       height: 26px;
       width: 26px;
       position: relative;
@@ -20,7 +20,7 @@
       }
 
       &:after{
-            background-image: url("/images/heart-solid.svg") ;
+            background-image: url("/images/heart-solid.svg?inline") ;
             display: none;
           }
 
@@ -33,5 +33,14 @@
         animation: fadeIn 1s linear forwards;
         display: revert;
       }
-
     }
+
+
+
+    .heart {
+      font-family: "Font Awesome 5 Free", sans-serif;
+      font-weight: 400;
+      content: "\f004";
+      position: relative;
+    }
+
