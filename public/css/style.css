@@ -660,31 +660,6 @@ body {
   }
 }
 
-.form__input {
-  font-size: 1em;
-  font-weight: 600;
-  background: transparent;
-  font-family: inherit;
-  border: none;
-  padding-left: 0.8rem;
-}
-@media only screen and (min-width: 37.5em) {
-  .form__input {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding-left: 0;
-  }
-}
-.form__input::-webkit-input-placeholder {
-  color: rgba(0, 0, 0, 0.7);
-}
-@media only screen and (min-width: 37.5em) {
-  .form__input::-webkit-input-placeholder {
-    display: initial;
-  }
-}
-
 .animation--ease1 {
   animation: fade-in 800ms ease-in-out;
 }
@@ -1075,6 +1050,30 @@ body {
 
 .header {
   position: relative;
+}
+.header__form {
+  font-size: 1em;
+  font-weight: 600;
+  background: transparent;
+  font-family: inherit;
+  border: none;
+  padding-left: 0.8rem;
+}
+@media only screen and (min-width: 37.5em) {
+  .header__form {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding-left: 0;
+  }
+}
+.header__form::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.7);
+}
+@media only screen and (min-width: 37.5em) {
+  .header__form::-webkit-input-placeholder {
+    display: initial;
+  }
 }
 .header__logo {
   display: flex;
