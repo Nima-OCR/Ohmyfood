@@ -11,8 +11,6 @@
     }
 
     @include respond(desktop) {
-        //width: 96.5%;
-        //position: fixed;
         top: 0;
         bottom: 0;
         left: 0;
@@ -20,14 +18,8 @@
         display: block;
         padding: 1rem;
         text-align: center;
-        //flex-direction: column;
-        //position: absolute;
-        //bottom: 0;
         height: 15rem;
-        //top: 114rem;
         font-size: 1.2rem;
-        //bottom: -10rem;
-        //height: -10rem;
     }
 
     &__footer-heading {
@@ -52,24 +44,18 @@
         @include respond(tab) {
             display: flex;
             flex-direction: column;
-
             justify-content: space-between;
             padding-left: 1rem;
             padding-right: 1rem ;
         }
 
         @include respond(desktop) {
-
             display: flex;
             flex-direction: column;
-
             justify-content: space-between;
             padding-left: 1rem;
             padding-right: 1rem ;
-
         }
-
-
     }
 
     &__li {
@@ -78,16 +64,13 @@
         @include respond(tab) {
             display: flex;
             justify-content: center;
-
         }
 
         @include respond(desktop) {
 
             display: flex;
             justify-content: center;
-
         }
-
     }
 
     &__a {
@@ -96,13 +79,11 @@
     }
 
     &__span {
-        //padding-left: 12px;
+
         font-weight: 300;
         &--pl {
             padding-left: 0.5rem;
         }
-
-
     }
 
     &__icon {
@@ -113,11 +94,6 @@
         @include respond(desktop) {
             font-size: 1.5rem;
             padding-right: 0.2rem;
-        }
-    }
-
-    &--menu {
-        @include respond(desktop) {
         }
     }
 }
