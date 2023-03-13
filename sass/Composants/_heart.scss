@@ -1,53 +1,37 @@
-.heart {
-  background-image: url("/images/heart-regular.svg") ;
-  //background-size: contain;
-  //display: block;
-  height: 26px;
-  width: 26px;
-  position: relative;
-  //border: 1px solid white;
+    .heart {
+      background-image: url("/images/heart-regular.svg") ;
+      height: 26px;
+      width: 26px;
+      position: relative;
 
-  @include respond(tab) {
-    //display: block;
-    //height: 36px;
-    //width: 36px;
-    //position: absolute;
-    ////left: 20rem;
-    //right: 3rem;
-    //top: 2.5rem;
-    //padding: 1rem;
 
-  }
+      &:before,
+      &:after{
+        content: "";
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: 0rem;
+        right: 0;
+        bottom: 0;
+        left: 0.01rem;
+        z-index: -1;
+        transform-origin: bottom;
+      }
 
-  @include respond(desktop) {
-    //display: none;
-  }
-}
+      &:after{
+            background-image: url("/images/heart-solid.svg") ;
+            display: none;
+          }
 
-.heart:before,
-.heart:after{
-  content: "";
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  top: 0rem;
-  right: 0;
-  bottom: 0;
-  left: 0.01rem;
-  z-index: -1;
-  transform-origin: bottom;
-}
+      &:before{
+            background: white;
+            transform-origin: top;
+          }
 
-.heart:after{
-  background-image: url("/images/heart-solid.svg") ;
-  display: none;
-}
-.heart:before{
-  background: white;
-  transform-origin: top;
-}
+      &:hover:after{
+        animation: fadeIn 1s linear forwards;
+        display: revert;
+      }
 
-.heart:hover:after{
-  animation: fadeIn 1s linear forwards;
-  display: revert;
-}
+    }

@@ -877,8 +877,7 @@ body {
   width: 26px;
   position: relative;
 }
-.heart:before,
-.heart:after {
+.heart:before, .heart:after {
   content: "";
   width: 24px;
   height: 24px;
@@ -890,17 +889,14 @@ body {
   z-index: -1;
   transform-origin: bottom;
 }
-
 .heart:after {
   background-image: url("/images/heart-solid.svg");
   display: none;
 }
-
 .heart:before {
   background: white;
   transform-origin: top;
 }
-
 .heart:hover:after {
   animation: fadeIn 1s linear forwards;
   display: revert;
