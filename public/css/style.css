@@ -811,7 +811,7 @@ main {
 }
 
 .heart {
-  background-image: url(../images/heart-regular.svg);
+  background-image: url("~/images/heart-regular.svg?inline");
   height: 26px;
   width: 26px;
   position: relative;
@@ -829,7 +829,7 @@ main {
   transform-origin: bottom;
 }
 .heart:after {
-  background-image: url(../images/heart-solid.svg);
+  background-image: url("~/images/heart-solid.svg?inline");
   display: none;
 }
 .heart:before {
