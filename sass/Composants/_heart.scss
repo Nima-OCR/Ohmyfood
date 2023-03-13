@@ -4,9 +4,7 @@
       width: 26px;
       position: relative;
 
-
-      &:before,
-      &:after{
+      &:before{
         content: "";
         width: 24px;
         height: 24px;
@@ -16,20 +14,18 @@
         bottom: 0;
         left: 0.01rem;
         z-index: -1;
-        transform-origin: bottom;
+        transform-origin: top;
       }
 
-      &:after{
+      &:before{
             background-image: url("../../assets/heart-solid.svg");
+        transform-origin: bottom;
+
             display: none;
           }
 
-      &:before{
-            background: white;
-            transform-origin: top;
-          }
 
-      &:hover:after{
+      &:hover:before{
         animation: fadeIn 1s linear forwards;
         display: revert;
       }
