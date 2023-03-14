@@ -37,15 +37,13 @@
 
     //Start Tab
     @include respond(tab){
-        //width: 80%;
-        margin: 1rem;
+      margin: 1rem;
       background-color: rgba($color-tertiary, 0.5);
-
       padding: 0.8rem;
-        border-radius: 15px;
-        transition: 2s;
-        transform: translateY(-1.5rem) ;
-        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.5));
+      border-radius: 15px;
+      transition: 2s;
+      transform: translateY(-1.5rem) ;
+      filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.5));
 
         .card__preview {
           margin-top: 0;
@@ -84,29 +82,25 @@
 
     //Start Desktop
     @include respond(desktop) {
-        margin-top: 2rem;
-        margin-right: 0;
-        margin-left: 0;
-        width: 28%;
-        height: 5rem;
+      margin-top: 2rem;
+      margin-right: 0;
+      margin-left: 0;
+      width: 28%;
+      height: 5rem;
 
+      .card__green-line {
+        width: 100%;
+      }
+      &:hover {
+        transform: translateY(-1rem);
+        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 
-            .card__green-line {
-              width: 100%;
-            }
-
-            &:hover {
-              transform: translateY(-1rem);
-              filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-
-              .card__heading {
-                padding-right: 1rem;
-              }
-
-            }
+        .card__heading {
+          padding-right: 1rem;
+        }
+      }
     }
     //End Desktop
-
 }
 //End anim-menu
 

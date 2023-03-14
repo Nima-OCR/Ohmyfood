@@ -74,49 +74,6 @@
           display: none;
         }
 
-        &--sc1 {
-          @include respond(tab)  {
-            transform: scale(0.8);
-            z-index: 1;
-          }
-
-          @include respond(desktop)  {
-            position: relative;
-            left: -2%;
-            transform: scale(1);
-            z-index: 1;
-          }
-        }
-
-        &--sc2 {
-          @include respond(tab)  {
-            transform: scale(1);
-            z-index: 3;
-          }
-
-          @include respond(desktop)  {
-
-            position: relative;
-            right: 2%;
-            transform: scale(1.2);
-            z-index: 2;
-          }
-        }
-
-        &--sc3 {
-          @include respond(tab)  {
-            transform: scale(0.8);
-            z-index: 2;
-          }
-          @include respond(desktop)  {
-
-            position: relative;
-            right: -2%;
-            transform: scale(1.4);
-            z-index: 3;
-          }
-        }
-
         @include respond(tab)  {
           &__shape {
             display: flex;

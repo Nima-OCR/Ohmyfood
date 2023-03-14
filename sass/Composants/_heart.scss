@@ -18,12 +18,10 @@
       }
 
       &:before{
-            background-image: url("../../assets/heart-solid.svg");
+        background-image: url("../../assets/heart-solid.svg");
         transform-origin: bottom;
-
-            display: none;
-          }
-
+        display: none;
+      }
 
       &:hover:before{
         animation: fadeIn 1s linear forwards;
