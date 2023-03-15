@@ -16,7 +16,7 @@
               padding-left:0;
             }
 
-          &::-webkit-input-placeholder {
+          &::placeholder {
             color: rgb($color-black, 0.7);
 
             @include respond(tab) {
