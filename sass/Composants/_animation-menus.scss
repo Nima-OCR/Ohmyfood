@@ -1,8 +1,8 @@
-//Start animation
+//Start animation progressive
 .animation {
 
     &--ease1 {
-      animation: fade-in 800ms ease-in-out;
+      animation: fade-in 500ms ease-in-out;
     }
 
     &--ease2 {
@@ -10,24 +10,17 @@
     }
 
     &--ease3 {
-      animation: fade-in 1200ms ease-in-out ;
+      animation: fade-in 1500ms ease-in-out ;
     }
 
     &--ease4 {
-      animation: fade-in 1500s ease-in-out;
-    }
-
-    &--fadeIn {
-      animation: grow 10s ease-in-out 0.15s infinite;
+      animation: fade-in 2000s ease-in-out;
     }
 
     &--menu {
-
       @include respond(desktop) {
         animation: none;
-
       }
-
     }
 }
 //End animation
@@ -96,11 +89,89 @@
         filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 
         .card__heading {
-          padding-right: 1rem;
+          //padding-right: 1rem;
         }
       }
     }
     //End Desktop
 }
 //End anim-menu
+
+//Start Check-menu
+.check {
+
+  .check-anim {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 1.5rem;
+    transition: all .5s;
+    transition-timing-function: ease-in-out;
+    overflow: hidden;
+
+    .choose-place-p {
+      font-size: initial;
+    }
+  }
+
+
+  & .check-anim:before {
+    content: '';
+    border-radius: 0 15px 15px 0 ;
+    background-color: $color-tertiary;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 4rem;
+    transform: translateX(100%) ;
+    transition:all .5s;
+    transition-timing-function: ease-in-out;
+
+
+
+    .choose-place-p {
+      padding-right: 4rem;
+    }
+  }
+
+
+  & .check-anim:after {
+    content: '\f058';
+    font-family: "Font Awesome 5 Free", sans-serif;
+    font-weight: bold;
+    position: absolute;
+    color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 15px 15px 0 ;
+    right: 0;
+    top: 0.01rem;
+    height: 100%;
+    width: 4rem;
+    transform: translateX(100%) rotate(0) ;
+    transition:all .5s;
+    transition-timing-function: ease-in-out;
+
+
+    .choose-place-p {
+      padding-right: 4rem;
+    }
+
+  }
+
+
+  & .check-anim:hover:before {
+    transform: translateX(0);
+  }
+
+  & .check-anim:hover:after {
+    transform: translateX(0) rotate(360deg);
+  }
+
+}
+//End Check-menu
+
 

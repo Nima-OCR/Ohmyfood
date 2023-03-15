@@ -1,57 +1,3 @@
-.check .check-anim {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  font-size: 1.5rem;
-  transition: all 0.5s;
-  overflow: hidden;
-}
-.check .check-anim .choose-place-p {
-  font-size: initial;
-}
-.check .check-anim:before {
-  content: "";
-  border-radius: 0 15px 15px 0;
-  background-color: #99E2D0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-  width: 4rem;
-  transform: translateX(100%);
-  transition: all 0.5s;
-}
-.check .check-anim:before .choose-place-p {
-  padding-right: 4rem;
-}
-.check .check-anim:after {
-  content: "\f058";
-  font-family: "Font Awesome 5 Free", sans-serif;
-  font-weight: bold;
-  position: absolute;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0 15px 15px 0;
-  right: 0;
-  top: 0.01rem;
-  height: 100%;
-  width: 4rem;
-  transform: translateX(100%) rotate(0);
-  transition: all 0.5s;
-}
-.check .check-anim:after .choose-place-p {
-  padding-right: 4rem;
-}
-.check .check-anim:hover:before {
-  transform: translateX(0);
-}
-.check .check-anim:hover:after {
-  transform: translateX(0) rotate(360deg);
-}
-
 body {
   margin: 0;
   font-family: "Roboto", sans-serif, "Shrikhand", cursive;
@@ -498,19 +444,16 @@ main {
 }
 
 .animation--ease1 {
-  animation: fade-in 800ms ease-in-out;
+  animation: fade-in 500ms ease-in-out;
 }
 .animation--ease2 {
   animation: fade-in 1000ms ease-in-out;
 }
 .animation--ease3 {
-  animation: fade-in 1200ms ease-in-out;
+  animation: fade-in 1500ms ease-in-out;
 }
 .animation--ease4 {
-  animation: fade-in 1500s ease-in-out;
-}
-.animation--fadeIn {
-  animation: grow 10s ease-in-out 0.15s infinite;
+  animation: fade-in 2000s ease-in-out;
 }
 @media only screen and (min-width: 56.25em) {
   .animation--menu {
@@ -570,9 +513,63 @@ main {
     transform: translateY(-1rem);
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   }
-  .anim-menu:hover .card__heading {
-    padding-right: 1rem;
-  }
+}
+
+.check .check-anim {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 1.5rem;
+  transition: all 0.5s;
+  transition-timing-function: ease-in-out;
+  overflow: hidden;
+}
+.check .check-anim .choose-place-p {
+  font-size: initial;
+}
+.check .check-anim:before {
+  content: "";
+  border-radius: 0 15px 15px 0;
+  background-color: #99E2D0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 4rem;
+  transform: translateX(100%);
+  transition: all 0.5s;
+  transition-timing-function: ease-in-out;
+}
+.check .check-anim:before .choose-place-p {
+  padding-right: 4rem;
+}
+.check .check-anim:after {
+  content: "\f058";
+  font-family: "Font Awesome 5 Free", sans-serif;
+  font-weight: bold;
+  position: absolute;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 15px 15px 0;
+  right: 0;
+  top: 0.01rem;
+  height: 100%;
+  width: 4rem;
+  transform: translateX(100%) rotate(0);
+  transition: all 0.5s;
+  transition-timing-function: ease-in-out;
+}
+.check .check-anim:after .choose-place-p {
+  padding-right: 4rem;
+}
+.check .check-anim:hover:before {
+  transform: translateX(0);
+}
+.check .check-anim:hover:after {
+  transform: translateX(0) rotate(360deg);
 }
 
 .loader-container {
@@ -856,6 +853,11 @@ main {
   font-size: 1.7rem;
   padding-left: 0;
 }
+.header__logo--preview h1 {
+  font-size: 1.7rem;
+  font-weight: 400;
+  margin: 0;
+}
 @media only screen and (min-width: 37.5em) {
   .header__logo--preview {
     padding-left: 1.1rem;
@@ -992,7 +994,6 @@ main {
     font-size: 3rem;
     margin-left: 0;
     color: #9356DC;
-    animation: fade-in 1000ms ease-in-out;
   }
 }
 
