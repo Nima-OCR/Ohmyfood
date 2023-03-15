@@ -23,8 +23,15 @@
         display: none;
       }
 
-      &:hover:before{
+      &:active:before{
         animation: fadeIn 1s linear forwards;
         display: revert;
+      }
+
+      @include respond(desktop) {
+        &:hover:before{
+          animation: fadeIn 1s linear forwards;
+          display: revert;
+        }
       }
     }

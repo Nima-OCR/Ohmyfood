@@ -647,9 +647,15 @@ main {
   transform-origin: bottom;
   display: none;
 }
-.heart:hover:before {
+.heart:active:before {
   animation: fadeIn 1s linear forwards;
   display: revert;
+}
+@media only screen and (min-width: 56.25em) {
+  .heart:hover:before {
+    animation: fadeIn 1s linear forwards;
+    display: revert;
+  }
 }
 
 .footer {
