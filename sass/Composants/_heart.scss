@@ -6,25 +6,19 @@
 
       &:before{
         content: "";
-        width: 24px;
-        height: 24px;
+        background-image: url("../../assets/heart-solid.svg");
         position: absolute;
         top: 0rem;
         right: 0;
         bottom: 0;
-        left: 0.01rem;
+        left: 0rem;
         z-index: -1;
-        transform-origin: top;
-      }
-
-      &:before{
-        background-image: url("../../assets/heart-solid.svg");
         transform-origin: bottom;
         display: none;
       }
 
       &:active:before{
-        animation: fadeIn 1s linear forwards;
+        animation: fadeIn 1s ease-in forwards;
         display: revert;
       }
 
