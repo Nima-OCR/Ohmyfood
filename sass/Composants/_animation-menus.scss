@@ -163,12 +163,22 @@
   }
 
 
-  & .check-anim:hover:before {
+  & .check-anim:active:before {
     transform: translateX(0);
   }
 
-  & .check-anim:hover:after {
+  & .check-anim:active:after {
     transform: translateX(0) rotate(360deg);
+  }
+
+  @include respond(desktop) {
+    & .check-anim:hover:before {
+      transform: translateX(0);
+    }
+
+    & .check-anim:hover:after {
+      transform: translateX(0) rotate(360deg);
+    }
   }
 
 }
