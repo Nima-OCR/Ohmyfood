@@ -4,6 +4,8 @@
       width: 26px;
       position: relative;
 
+      cursor: pointer;
+
       &:before{
         content: "";
         background-image: url("../../assets/heart-solid.svg");
@@ -21,11 +23,8 @@
         animation: fadeIn 1s ease-in forwards;
         display: revert;
       }
+    }
 
-      @include respond(desktop) {
-        &:hover:before{
-          animation: fadeIn 1s linear forwards;
-          display: revert;
-        }
-      }
+    .heart-menu {
+      z-index: 1;
     }
